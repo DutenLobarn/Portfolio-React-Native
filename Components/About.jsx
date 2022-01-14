@@ -1,12 +1,11 @@
 import React from "react";
 import { Text, View } from "react-native";
-import Nav from "./Nav";
+import styles from "../styles.jsx"
 
-export default function About({ navigation }) {
+export default function About() {
   return (
-    <View>
-      <Text>About</Text>
-      <Nav navigation={navigation} />
+    <View style={styles.container}>
+      <Text >About</Text>
     </View>
   );
 }

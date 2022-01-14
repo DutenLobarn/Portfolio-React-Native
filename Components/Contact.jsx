@@ -1,12 +1,12 @@
 import React from "react";
 import { Text, View } from "react-native";
-import Nav from "./Nav";
+import styles from "../styles.jsx"
 
-export default function Contact({ navigation }) {
+export default function Contact() {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Contact</Text>
-      <Nav navigation={navigation} />
+
     </View>
   );
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import { Text, View } from "react-native";
-import Nav from "./Nav";
+import styles from "../styles.jsx"
 
-export default function Projects({ navigation }) {
+export default function Projects() {
   return (
-    <View>
-      <Text>Projects</Text>
-      <Nav navigation={navigation} />
+    <View style={styles.container}>
+      <Text >Projects</Text>
+
     </View>
   );
 }

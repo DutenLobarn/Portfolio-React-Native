@@ -1,12 +1,12 @@
 import React from "react";
 import { Text, View } from "react-native";
-import Nav from "./Nav";
+import styles from "../styles.jsx"
 
-export default function Skills({ navigation }) {
+export default function Skills() {
   return (
-    <View>
-      <Text>Skills</Text>
-      <Nav navigation={navigation} />
+    <View style={styles.container}>
+      <Text >Skills</Text>
+
     </View>
   );
 }

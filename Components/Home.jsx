@@ -1,13 +1,12 @@
 import React from "react";
-import Nav from "./Nav";
-
 import { Text, View } from "react-native";
+import styles from "../styles.jsx"
 
-export default function Home({ navigation }) {
+export default function Home() {
   return (
-    <View>
-      <Text>Home</Text>
-      <Nav navigation={navigation} />
+    <View style={styles.container}>
+      <Text >Home</Text>
+
     </View>
   );
 }

@@ -22,6 +22,20 @@ export default function App() {
 
 
       <Tab.Navigator screenOptions={{ headerShown: false }} >
+        <Tab.Screen name="Projects" component={Projects} options={{
+          tabBarLabel: "",
+          tabBarIcon: () => (
+            <Ionicons name="ios-home-outline" size={24} color="#8F2F2F" />
+          ),
+        }} />
+
+        <Tab.Screen name="Skills" component={Skills} options={{
+          tabBarLabel: "",
+          tabBarIcon: () => (
+            <Ionicons name="ios-home-outline" size={24} color="#8F2F2F" />
+          ),
+        }} />
+
         <Tab.Screen name="Home" component={Home}
           options={{
             tabBarLabel: "",
@@ -30,13 +44,19 @@ export default function App() {
             ),
           }} />
 
+        <Tab.Screen name="About" component={About} options={{
+          tabBarLabel: "",
+          tabBarIcon: () => (
+            <Ionicons name="ios-home-outline" size={24} color="#8F2F2F" />
+          ),
+        }} />
 
-
-
-        <Tab.Screen name="Projects" component={Projects} />
-        <Tab.Screen name="Skills" component={Skills} />
-        <Tab.Screen name="About" component={About} />
-        <Tab.Screen name="Contact" component={Contact} />
+        <Tab.Screen name="Contact" component={Contact} options={{
+          tabBarLabel: "",
+          tabBarIcon: () => (
+            <Ionicons name="ios-home-outline" size={24} color="#8F2F2F" />
+          ),
+        }} />
 
       </Tab.Navigator >
 

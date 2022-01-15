@@ -5,6 +5,7 @@ import { StyleSheet, Text, View } from "react-native";
 // Navigation
 import { NavigationContainer } from "@react-navigation/native";
 /* import { createNativeStackNavigator } from "@react-navigation/native-stack"; */
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 // Components
 import Home from "./Components/Home.jsx";
@@ -12,18 +13,15 @@ import Projects from "./Components/Projects.jsx";
 import Skills from "./Components/Skills.jsx";
 import About from "./Components/About.jsx";
 import Contact from "./Components/Contact.jsx";
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // console.log(NavigationContainer);
 /* const Stack = createNativeStackNavigator(); */
 const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer >
-      {/* <Stack.Navigator> */}
-      <Tab.Navigator screenOptions={{ headerShown: false }}>
 
 
-
+      <Tab.Navigator screenOptions={{ headerShown: false }} >
         <Tab.Screen name="Home" component={Home}
           options={{
             tabBarLabel: "",
@@ -40,10 +38,10 @@ export default function App() {
         <Tab.Screen name="About" component={About} />
         <Tab.Screen name="Contact" component={Contact} />
 
-      </Tab.Navigator>
+      </Tab.Navigator >
 
 
-      {/*  </Stack.Navigator> */}
+
     </NavigationContainer>
   );
 }

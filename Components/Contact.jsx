@@ -1,12 +1,10 @@
 import React from "react";
 import { Text, View } from "react-native";
-import Nav from "./Nav";
 
-export default function Contact({ navigation }) {
+export default function Contact() {
   return (
     <View>
       <Text>Contact</Text>
-      <Nav navigation={navigation} />
     </View>
   );
 }

@@ -7,7 +7,12 @@ import { NavigationContainer } from "@react-navigation/native";
 /* import { createNativeStackNavigator } from "@react-navigation/native-stack"; */
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // import icons
-import { Ionicons } from '@expo/vector-icons';
+import {
+  Ionicons, MaterialCommunityIcons,
+  FontAwesome5,
+  MaterialIcons,
+  Entypo,
+} from '@expo/vector-icons';
 // Components
 import Home from "./Components/Home.jsx";
 import Projects from "./Components/Projects.jsx";

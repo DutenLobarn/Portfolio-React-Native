@@ -6,6 +6,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 /* import { createNativeStackNavigator } from "@react-navigation/native-stack"; */
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+// import icons
 import { Ionicons } from '@expo/vector-icons';
 // Components
 import Home from "./Components/Home.jsx";

@@ -25,41 +25,47 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer >
-      <Tab.Navigator screenOptions={{ headerShown: false }} tabBarOptions={{ showLabel: false }}>
+      <Tab.Navigator screenOptions={{
+        headerShown: false,
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          backgroundColor: "#000"
+        }
+      }}>
 
         <Tab.Screen name="Projects" component={Projects} options={{
 
-          tabBarIcon: () => (
-            <Entypo name="briefcase" size={24} color="#8F2F2F" />
+          tabBarIcon: ({ focused }) => (
+            <Entypo name="briefcase" size={24} color={focused ? "#C71B1B" : "#8F2F2F"} />
           ),
         }} />
 
         <Tab.Screen name="Skills" component={Skills} options={{
 
-          tabBarIcon: () => (
-            <MaterialCommunityIcons name="certificate-outline" size={24} color="#8F2F2F" />
+          tabBarIcon: ({ focused }) => (
+            <MaterialCommunityIcons name="certificate" size={24} color={focused ? "#C71B1B" : "#8F2F2F"} />
           ),
         }} />
 
         <Tab.Screen name="Home" component={Home}
           options={{
 
-            tabBarIcon: () => (
-              <Ionicons name="ios-home-outline" size={24} color="#8F2F2F" />
+            tabBarIcon: ({ focused }) => (
+              <Ionicons name="ios-home" size={24} color={focused ? "#C71B1B" : "#8F2F2F"} />
             ),
           }} />
 
         <Tab.Screen name="About" component={About} options={{
 
-          tabBarIcon: () => (
-            <FontAwesome5 name="user-alt" size={24} color="#8F2F2F" />
+          tabBarIcon: ({ focused }) => (
+            <FontAwesome5 name="user-alt" size={24} color={focused ? "#C71B1B" : "#8F2F2F"} />
           ),
         }} />
 
         <Tab.Screen name="Contact" component={Contact} options={{
 
-          tabBarIcon: () => (
-            <MaterialIcons name="quick-contacts-mail" size={24} color="#8F2F2F" />
+          tabBarIcon: ({ focused }) => (
+            <MaterialIcons name="quick-contacts-mail" size={24} color={focused ? "#C71B1B" : "#8F2F2F"} />
           ),
         }} />
 

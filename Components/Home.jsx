@@ -23,10 +23,6 @@ export default function Home() {
           <Entypo
             style={{
               display: "flex",
-              /*     width: "33%", */
-              /*     height: "10%", */
-              /*  justifyContent: "center",
-               alignItems: "center", */
             }}
             name="sweden"
             size={55}
@@ -36,12 +32,6 @@ export default function Home() {
             style={{
               paddingTop: 50,
               alignItems: "center",
-
-              /*  justifyContent: "center", */
-              /* marginTop: 45,
-              marginRight: 40,
-              marginLeft: 40,
-              marginBottom: 0, */
             }}
           >
             <Text
@@ -50,7 +40,6 @@ export default function Home() {
                 color: "#7C2929",
                 fontFamily: "fantasy",
                 paddingBottom: 20,
-                /*   marginBottom: 15, */
               }}
             >
               Mandus
@@ -86,14 +75,7 @@ export default function Home() {
             </Text>
           </View>
           <Ionicons
-            style={{
-              /* display: "flex",
-              width: "33%",
-              height: "10%", */
-              /*  justifyContent: "center", */
-              /*     fontSize: "xxx-large", */
-              /*  alignItems: "center", */
-            }}
+
             name="sunny"
             size={55}
             color="#7C2929"
@@ -107,14 +89,9 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    /* height: "100%", */
+
   },
   image: {
     flex: 1,
-    /*  display: "flex", */
-
-    /*  height: "100%", */
-    /*  flexDirection: "row", */
-    /*  justifyContent: "center" */
   },
 });

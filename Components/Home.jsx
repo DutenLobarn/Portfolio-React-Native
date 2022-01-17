@@ -18,7 +18,7 @@ export default function Home() {
           height: "100%",
           flexDirection: "row",
           justifyContent: "space-around",
-          paddingTop: 30,
+          paddingTop: 45,
         }}>
           <Entypo
             style={{

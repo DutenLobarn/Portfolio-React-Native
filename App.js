@@ -25,18 +25,17 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer >
+      <Tab.Navigator screenOptions={{ headerShown: false }} tabBarOptions={{ showLabel: false }}>
 
-
-      <Tab.Navigator screenOptions={{ headerShown: false }} >
         <Tab.Screen name="Projects" component={Projects} options={{
-          tabBarLabel: "",
+
           tabBarIcon: () => (
             <Entypo name="briefcase" size={24} color="#8F2F2F" />
           ),
         }} />
 
         <Tab.Screen name="Skills" component={Skills} options={{
-          tabBarLabel: "",
+
           tabBarIcon: () => (
             <MaterialCommunityIcons name="certificate-outline" size={24} color="#8F2F2F" />
           ),
@@ -44,21 +43,21 @@ export default function App() {
 
         <Tab.Screen name="Home" component={Home}
           options={{
-            tabBarLabel: "",
+
             tabBarIcon: () => (
               <Ionicons name="ios-home-outline" size={24} color="#8F2F2F" />
             ),
           }} />
 
         <Tab.Screen name="About" component={About} options={{
-          tabBarLabel: "",
+
           tabBarIcon: () => (
             <FontAwesome5 name="user-alt" size={24} color="#8F2F2F" />
           ),
         }} />
 
         <Tab.Screen name="Contact" component={Contact} options={{
-          tabBarLabel: "",
+
           tabBarIcon: () => (
             <MaterialIcons name="quick-contacts-mail" size={24} color="#8F2F2F" />
           ),

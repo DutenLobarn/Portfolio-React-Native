@@ -1,7 +1,7 @@
 // CSS
-import { StatusBar } from "expo-status-bar";
+// import { StatusBar } from "expo-status-bar";
 // React Native
-import { StyleSheet, Text, View } from "react-native";
+// import { StyleSheet, Text, View } from "react-native";
 // Navigation
 import { NavigationContainer } from "@react-navigation/native";
 /* import { createNativeStackNavigator } from "@react-navigation/native-stack"; */
@@ -76,5 +76,4 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
 

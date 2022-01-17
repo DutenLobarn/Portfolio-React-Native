@@ -1,7 +1,7 @@
 // CSS
-import { StatusBar } from "expo-status-bar";
+// import { StatusBar } from "expo-status-bar";
 // React Native
-import { StyleSheet, Text, View } from "react-native";
+// import { StyleSheet, Text, View } from "react-native";
 // Navigation
 import { NavigationContainer } from "@react-navigation/native";
 // import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -26,14 +26,26 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator screenOptions={{ headerShown: false }}>
+      <Tab.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerShown: false,
+          tabBarStyle: {
+            backgroundColor: "#000",
+          },
+        }}
+      >
         <Tab.Screen
           name="Projects"
           component={Projects}
           options={{
+            title: "Projects",
+            // tabBarStyle: {
+            //   backgroundColor: "#000",
+            // },
             tabBarLabel: "",
             tabBarIcon: () => (
-              <Entypo name="briefcase" size={24} color="#8F2F2F" />
+              <Entypo name="briefcase" size={24} color="#7C2929" />
             ),
           }}
         />
@@ -41,11 +53,15 @@ export default function App() {
           name="Skills"
           component={Skills}
           options={{
+            title: "Skills",
+            // tabBarStyle: {
+            //   backgroundColor: "#000",
+            // },
             tabBarLabel: "",
             tabBarIcon: () => (
               <MaterialCommunityIcons
                 name="certificate-outline"
-                size={24}
+                size={28}
                 color="#8F2F2F"
               />
             ),
@@ -55,9 +71,12 @@ export default function App() {
           name="Home"
           component={Home}
           options={{
+            // headerStyle: {
+            //   backgroundColor: "#000",
+            // },
             tabBarLabel: "",
             tabBarIcon: () => (
-              <Ionicons name="ios-home-outline" size={24} color="#8F2F2F" />
+              <Ionicons name="ios-home" size={25} color="#8F2F2F" />
             ),
           }}
         />
@@ -65,9 +84,13 @@ export default function App() {
           name="About"
           component={About}
           options={{
+            title: "About",
+            // headerStyle: {
+            //   backgroundColor: "#000",
+            // },
             tabBarLabel: "",
             tabBarIcon: () => (
-              <FontAwesome5 name="user-alt" size={24} color="#8F2F2F" />
+              <FontAwesome5 name="user-alt" size={22} color="#8F2F2F" />
             ),
           }}
         />
@@ -75,11 +98,15 @@ export default function App() {
           name="Contact"
           component={Contact}
           options={{
+            title: "Contact",
+            // headerStyle: {
+            //   backgroundColor: "#000",
+            // },
             tabBarLabel: "",
             tabBarIcon: () => (
               <MaterialIcons
                 name="quick-contacts-mail"
-                size={24}
+                size={28}
                 color="#8F2F2F"
               />
             ),
@@ -90,11 +117,11 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: "#fff",
+//     alignItems: "center",
+//     justifyContent: "center",
+//   },
+// });

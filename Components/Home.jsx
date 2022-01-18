@@ -1,44 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { Ionicons, Entypo } from "@expo/vector-icons";
 
 import { Text, View, ImageBackground, StyleSheet } from "react-native";
 
-export default function Home() {
+export default function Home({ colorTheme }) {
   return (
     <View style={styles.container}>
-
-
       <ImageBackground
         style={styles.image}
         source={require("../assets/src/hero.png")}
         resizeMode="cover"
       >
-        <View style={{
-          width: "100%",
-          height: "100%",
-          flexDirection: "row",
-          justifyContent: "space-around",
-          paddingTop: 45,
-        }}>
-          <Entypo
-            style={{
-              display: "flex",
-            }}
-            name="sweden"
-            size={55}
-            color="blue"
-          />
+        <View
+          style={{
+            width: "100%",
+            height: "100%",
+            flexDirection: "row",
+            justifyContent: "space-around",
+            paddingTop: 60,
+          }}
+        >
           <View
             style={{
-              paddingTop: 50,
+              paddingTop: 40,
               alignItems: "center",
             }}
           >
             <Text
               style={{
                 fontSize: 30,
-                color: "#7C2929",
-                fontFamily: "fantasy",
+                color: colorTheme,
                 paddingBottom: 20,
               }}
             >
@@ -47,9 +38,7 @@ export default function Home() {
             <Text
               style={{
                 fontSize: 25,
-                color: "#7C2929",
-                fontFamily: "fantasy",
-
+                color: colorTheme,
               }}
             >
               FrontEnd
@@ -57,30 +46,22 @@ export default function Home() {
             <Text
               style={{
                 fontSize: 25,
-                color: "#7C2929",
-                fontFamily: "fantasy",
+                color: colorTheme,
                 lineHeight: 38,
               }}
             >
               Web och App
             </Text>
+
             <Text
               style={{
                 fontSize: 25,
-                color: "#7C2929",
-                fontFamily: "fantasy",
+                color: colorTheme,
               }}
             >
               Utveckling
             </Text>
           </View>
-          <Ionicons
-
-            name="sunny"
-            size={55}
-            color="#7C2929"
-          />
-
         </View>
       </ImageBackground>
     </View>
@@ -89,7 +70,6 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
   },
   image: {
     flex: 1,

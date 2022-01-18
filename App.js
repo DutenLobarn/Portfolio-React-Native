@@ -1,7 +1,7 @@
 // CSS
 // import { StatusBar } from "expo-status-bar";
 // React Native
-// import { StyleSheet, Text, View } from "react-native";
+import { Image, Alert } from "react-native";
 // Navigation
 import { NavigationContainer } from "@react-navigation/native";
 /* import { createNativeStackNavigator } from "@react-navigation/native-stack"; */
@@ -70,6 +70,28 @@ export default function App() {
         }} />
 
       </Tab.Navigator >
+
+      <Image onPress={() => console.log('hej')}
+        source={require('./assets/src/swedishflag.png')}
+        style={{
+          width: 50,
+          height: 50,
+          position: "absolute",
+          top: 30,
+          left: 20,
+          zIndex: 10,
+        }} />
+
+
+
+
+
+      <Image source={require('./assets/src/albania.png')} style={{ width: 50, height: 50, }} />
+      <Image source={require('./assets/src/chinaflag.png')} style={{ width: 50, height: 50, }} />
+      <Image source={require('./assets/src/engelishflag.png')} style={{ width: 50, height: 50, }} />
+
+
+
 
 
 

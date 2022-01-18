@@ -30,9 +30,6 @@ export default function Home() {
             paddingTop: 45,
           }}>
             <Entypo
-              style={{
-                display: "flex",
-              }}
               name="sweden"
               size={40}
               color="blue"

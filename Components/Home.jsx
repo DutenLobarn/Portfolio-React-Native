@@ -29,11 +29,7 @@ export default function Home() {
             justifyContent: "space-around",
             paddingTop: 45,
           }}>
-            <Entypo
-              name="sweden"
-              size={40}
-              color="blue"
-            />
+
             <View
               style={{
                 paddingTop: 50,
@@ -80,12 +76,7 @@ export default function Home() {
                 Utveckling
               </Text>
             </View>
-            <Ionicons
 
-              name="sunny"
-              size={40}
-              color="#7C2929"
-            />
 
           </View>
         </ImageBackground>

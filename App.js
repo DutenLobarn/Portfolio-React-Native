@@ -30,9 +30,6 @@ export default function App() {
 
   const Tab = createBottomTabNavigator();
 
-  console.log("color", colorTheme);
-  console.log("nav", navBackgroundColor);
-
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -46,7 +43,9 @@ export default function App() {
       >
         <Tab.Screen
           name="Projects"
-          children={() => <Projects colorTheme={colorTheme} />}
+          children={() => (
+            <Projects colorTheme={colorTheme} title={"Projekt"} />
+          )}
           options={{
             tabBarIcon: ({ focused }) => (
               <Entypo
@@ -59,7 +58,9 @@ export default function App() {
         />
         <Tab.Screen
           name="Skills"
-          children={() => <Skills colorTheme={colorTheme} />}
+          children={() => (
+            <Skills colorTheme={colorTheme} title={"Färdigheter"} />
+          )}
           options={{
             tabBarIcon: ({ focused }) => (
               <MaterialCommunityIcons
@@ -85,7 +86,7 @@ export default function App() {
         />
         <Tab.Screen
           name="About"
-          children={() => <About colorTheme={colorTheme} />}
+          children={() => <About colorTheme={colorTheme} title={"Om"} />}
           options={{
             tabBarIcon: ({ focused }) => (
               <FontAwesome5
@@ -98,7 +99,7 @@ export default function App() {
         />
         <Tab.Screen
           name="Contact"
-          children={() => <Contact colorTheme={colorTheme} />}
+          children={() => <Contact colorTheme={colorTheme} title={"Kontakt"} />}
           options={{
             tabBarIcon: ({ focused }) => (
               <MaterialIcons

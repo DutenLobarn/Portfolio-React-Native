@@ -138,7 +138,7 @@ export default function App() {
         <AntDesign
           name="downcircleo"
           size={24}
-          color="black"
+          color={colorTheme}
           style={{ alignSelf: "center", marginBottom: 10 }}
         />
 

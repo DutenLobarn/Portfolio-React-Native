@@ -1,5 +1,12 @@
 import React from "react";
-import { Text, View, Image, ScrollView } from "react-native";
+import {
+  Text,
+  View,
+  Image,
+  ScrollView,
+  SafeAreaView,
+  StatusBar,
+} from "react-native";
 import AppLoading from "expo-app-loading";
 import { useFonts, Orbitron_500Medium } from "@expo-google-fonts/orbitron";
 import { FontAwesome } from "@expo/vector-icons";
@@ -31,6 +38,7 @@ export default function Skills({ colorTheme, title }) {
         >
           {title}
         </Text>
+
         <Image
           resizeMode="stretch"
           style={{
@@ -42,6 +50,7 @@ export default function Skills({ colorTheme, title }) {
           }}
           source={imagePath}
         />
+
         <View
           style={{
             display: "flex",
@@ -56,6 +65,38 @@ export default function Skills({ colorTheme, title }) {
           <FontAwesome name="star" size={10} color={starsColor5} />
         </View>
       </View>
+    );
+  };
+
+  const levelSkills = (text) => {
+    return (
+      <Text
+        style={{
+          alignSelf: "center",
+          color: colorTheme === "#000" ? "#000" : "#fff",
+        }}
+      >
+        {text}
+      </Text>
+    );
+  };
+
+  const skillsHeadLine = (headLineTitle) => {
+    return (
+      <Text
+        style={{
+          width: "100%",
+          height: 50,
+          fontSize: 20,
+          color: colorTheme,
+          fontWeight: "bold",
+          paddingTop: 10,
+          fontFamily: "Orbitron_500Medium",
+          textAlign: "center",
+        }}
+      >
+        {headLineTitle}
+      </Text>
     );
   };
 
@@ -74,131 +115,49 @@ export default function Skills({ colorTheme, title }) {
   } else {
     return (
       <LinearGradient
-        style={{ width: "100%", height: "100%" }}
-        colors={[mainLinearGradientColor, secondaryLinearGradientColor]}
+        style={{ flex: 1 }}
+        colors={[secondaryLinearGradientColor, mainLinearGradientColor]}
       >
-        <ScrollView>
-          <Text
-            style={{
-              flex: 1,
-              position: "absolute",
-              top: 50,
-              fontSize: 30,
-              color: colorTheme,
-              fontWeight: "bold",
-              alignSelf: "center",
-              fontFamily: "Orbitron_500Medium",
-            }}
-          >
-            {title}
-          </Text>
+        <Text
+          style={{
+            paddingTop: 50,
+            fontSize: 30,
+            color: colorTheme,
+            fontWeight: "bold",
+            textAlign: "center",
+            fontFamily: "Orbitron_500Medium",
+          }}
+        >
+          {title}
+        </Text>
 
+        <ScrollView style={{ flex: 1 }}>
           <View
             style={{
-              flex: 1,
-              position: "absolute",
-              width: "100%",
-              height: 50,
-              top: 130,
+              height: 100,
               display: "flex",
               flexDirection: "row",
-
               justifyContent: "space-evenly",
+              alignItems: "center",
+              paddingTop: 50,
             }}
           >
             <View style={{ flex: 1 }}>
-              <Text
-                style={{
-                  alignSelf: "center",
-                  color: colorTheme === "#000" ? "#000" : "#fff",
-                }}
-              >
-                Student
-              </Text>
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text
-                style={{
-                  alignSelf: "center",
-                  color: colorTheme === "#000" ? "#000" : "#fff",
-                }}
-              >
-                Entry
-              </Text>
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text
-                style={{
-                  alignSelf: "center",
-                  color: colorTheme === "#000" ? "#000" : "#fff",
-                }}
-              >
-                Junior
-              </Text>
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
+              {levelSkills("Student")}
 
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text
-                style={{
-                  alignSelf: "center",
-                  color: colorTheme === "#000" ? "#000" : "#fff",
-                }}
-              >
-                Senior
-              </Text>
               <View
                 style={{
                   display: "flex",
                   flexDirection: "row",
+                  justifyContent: "center",
+                }}
+              >
+                <FontAwesome name="star" size={10} color="gold" />
+              </View>
+            </View>
 
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
             <View style={{ flex: 1 }}>
-              <Text
-                style={{
-                  alignSelf: "center",
-                  color: colorTheme === "#000" ? "#000" : "#fff",
-                }}
-              >
-                Master
-              </Text>
+              {levelSkills("Entry")}
               <View
                 style={{
                   display: "flex",
@@ -206,35 +165,63 @@ export default function Skills({ colorTheme, title }) {
                   justifyContent: "center",
                 }}
               >
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
+                <FontAwesome name="star" size={10} color="gold" />
+                <FontAwesome name="star" size={10} color="gold" />
+              </View>
+            </View>
+            <View style={{ flex: 1 }}>
+              {levelSkills("Junior")}
+
+              <View
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                }}
+              >
+                <FontAwesome name="star" size={10} color="gold" />
+                <FontAwesome name="star" size={10} color="gold" />
+                <FontAwesome name="star" size={10} color="gold" />
+              </View>
+            </View>
+            <View style={{ flex: 1 }}>
+              {levelSkills("Senior")}
+              <View
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                }}
+              >
+                <FontAwesome name="star" size={10} color="gold" />
+                <FontAwesome name="star" size={10} color="gold" />
+                <FontAwesome name="star" size={10} color="gold" />
+                <FontAwesome name="star" size={10} color="gold" />
+              </View>
+            </View>
+            <View style={{ flex: 1 }}>
+              {levelSkills("Master")}
+              <View
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                }}
+              >
+                <FontAwesome name="star" size={10} color="gold" />
+                <FontAwesome name="star" size={10} color="gold" />
+                <FontAwesome name="star" size={10} color="gold" />
+                <FontAwesome name="star" size={10} color="gold" />
+                <FontAwesome name="star" size={10} color="gold" />
               </View>
             </View>
           </View>
+          {skillsHeadLine("UX")}
 
-          <Text
-            style={{
-              position: "absolute",
-              top: 160,
-              fontSize: 20,
-              color: colorTheme,
-              fontWeight: "bold",
-              alignSelf: "center",
-              fontFamily: "Orbitron_500Medium",
-            }}
-          >
-            UX
-          </Text>
           <View
             style={{
-              position: "absolute",
-              width: "20%",
+              width: "100%",
               height: "10%",
-              backgroundColor: "grey",
-              top: 190,
               display: "flex",
               flexDirection: "row",
             }}
@@ -242,33 +229,18 @@ export default function Skills({ colorTheme, title }) {
             {element(
               " Figma",
               require("../assets/src/figma.png"),
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow"
+              "gold",
+              "gold",
+              "gold",
+              "gold",
+              "gold"
             )}
           </View>
-          <Text
-            style={{
-              position: "absolute",
-              top: 250,
-              fontSize: 20,
-              color: colorTheme,
-              fontWeight: "bold",
-              alignSelf: "center",
-              fontFamily: "Orbitron_500Medium",
-            }}
-          >
-            FrontEnd
-          </Text>
+          {skillsHeadLine("FrontEnd")}
           <View
             style={{
-              position: "absolute",
               width: "100%",
               height: "10%",
-              backgroundColor: "grey",
-              top: 285,
               display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
@@ -277,55 +249,53 @@ export default function Skills({ colorTheme, title }) {
             {element(
               " HTML5",
               require("../assets/src/html.png"),
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow"
+              "gold",
+              "gold",
+              "gold",
+              "gold",
+              "gold"
             )}
             {element(
               "CSS",
               require("../assets/src/css.png"),
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow"
+              "gold",
+              "gold",
+              "gold",
+              "gold",
+              "gold"
             )}
             {element(
               "SASS",
               require("../assets/src/sass.png"),
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow"
+              "gold",
+              "gold",
+              "gold",
+              "gold",
+              "gold"
             )}
             {element(
               "JavaScript",
               require("../assets/src/javascript.png"),
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow"
+              "gold",
+              "gold",
+              "gold",
+              "gold",
+              "gold"
             )}
             {element(
               "React",
               require("../assets/src/react.png"),
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow"
+              "gold",
+              "gold",
+              "gold",
+              "gold",
+              "gold"
             )}
           </View>
           <View
             style={{
-              position: "absolute",
               width: "20%",
               height: "10%",
-              top: 355,
               display: "flex",
               flexDirection: "row",
             }}
@@ -333,32 +303,18 @@ export default function Skills({ colorTheme, title }) {
             {element(
               "Redux",
               require("../assets/src/redux.png"),
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow"
+              "gold",
+              "gold",
+              "gold",
+              "gold",
+              "gold"
             )}
           </View>
-          <Text
-            style={{
-              position: "absolute",
-              top: 420,
-              fontSize: 20,
-              color: colorTheme,
-              fontWeight: "bold",
-              alignSelf: "center",
-              fontFamily: "Orbitron_500Medium",
-            }}
-          >
-            APP
-          </Text>
+          {skillsHeadLine("APP")}
           <View
             style={{
-              position: "absolute",
-              width: "20%",
+              width: "100%",
               height: "10%",
-              top: 450,
               display: "flex",
               flexDirection: "row",
             }}
@@ -366,33 +322,18 @@ export default function Skills({ colorTheme, title }) {
             {element(
               "Native",
               require("../assets/src/native.png"),
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow"
+              "gold",
+              "gold",
+              "gold",
+              "gold",
+              "gold"
             )}
           </View>
-          <Text
-            style={{
-              position: "absolute",
-              top: 500,
-              fontSize: 20,
-              color: colorTheme,
-              fontWeight: "bold",
-              alignSelf: "center",
-              fontFamily: "Orbitron_500Medium",
-            }}
-          >
-            BackEnd
-          </Text>
+          {skillsHeadLine("BackEnd")}
           <View
             style={{
-              position: "absolute",
-              width: "60%",
+              width: "100%",
               height: "10%",
-              backgroundColor: "grey",
-              top: 530,
               display: "flex",
               flexDirection: "row",
             }}
@@ -400,72 +341,58 @@ export default function Skills({ colorTheme, title }) {
             {element(
               "Node.JS",
               require("../assets/src/node.png"),
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow"
+              "gold",
+              "gold",
+              "gold",
+              "gold",
+              "gold"
             )}
             {element(
               "Express",
               require("../assets/src/express.png"),
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow"
+              "gold",
+              "gold",
+              "gold",
+              "gold",
+              "gold"
             )}
             {element(
               "Strapi",
               require("../assets/src/strapi.png"),
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow"
+              "gold",
+              "gold",
+              "gold",
+              "gold",
+              "gold"
             )}
           </View>
-          <Text
-            style={{
-              position: "absolute",
-              top: 600,
-              fontSize: 20,
-              color: colorTheme,
-              fontWeight: "bold",
-              alignSelf: "center",
-              fontFamily: "Orbitron_500Medium",
-            }}
-          >
-            Database
-          </Text>
+          {skillsHeadLine("Database")}
           <View
             style={{
-              position: "absolute",
-              width: "40%",
+              width: "100%",
               height: "10%",
-              backgroundColor: "grey",
-              top: 630,
               display: "flex",
               flexDirection: "row",
+              marginBottom: 100,
             }}
           >
             {element(
               "Mongo DB",
               require("../assets/src/mongodb.png"),
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow"
+              "gold",
+              "gold",
+              "gold",
+              "gold",
+              "gold"
             )}
             {element(
               "Mongoose",
               require("../assets/src/mongoose.png"),
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow",
-              "yellow"
+              "gold",
+              "gold",
+              colorTheme === "#000" ? "#000" : "#fff",
+              "gold",
+              "gold"
             )}
           </View>
         </ScrollView>

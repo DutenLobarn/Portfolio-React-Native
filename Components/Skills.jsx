@@ -1,11 +1,64 @@
 import React from "react";
-import { Text, View, Image } from "react-native";
+import { Text, View, Image, ScrollView } from "react-native";
 import AppLoading from "expo-app-loading";
 import { useFonts, Orbitron_500Medium } from "@expo-google-fonts/orbitron";
 import { FontAwesome } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function Skills({ colorTheme, title }) {
+  const element = (
+    title,
+    imagePath,
+    starsColor1,
+    starsColor2,
+    starsColor3,
+    starsColor4,
+    starsColor5
+  ) => {
+    return (
+      <View
+        style={{
+          flex: 1,
+          height: 70,
+        }}
+      >
+        <Text
+          style={{
+            alignSelf: "center",
+            color: colorTheme === "#000" ? "#000" : "#fff",
+            paddingBottom: 4,
+          }}
+        >
+          {title}
+        </Text>
+        <Image
+          resizeMode="stretch"
+          style={{
+            width: 30,
+            height: 30,
+            alignSelf: "center",
+            marginBottom: 5,
+            borderRadius: 5,
+          }}
+          source={imagePath}
+        />
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+          }}
+        >
+          <FontAwesome name="star" size={10} color={starsColor1} />
+          <FontAwesome name="star" size={10} color={starsColor2} />
+          <FontAwesome name="star" size={10} color={starsColor3} />
+          <FontAwesome name="star" size={10} color={starsColor4} />
+          <FontAwesome name="star" size={10} color={starsColor5} />
+        </View>
+      </View>
+    );
+  };
+
   let mainLinearGradientColor = "#000";
   let secondaryLinearGradientColor = "grey";
   if (colorTheme === "#000") {
@@ -21,11 +74,13 @@ export default function Skills({ colorTheme, title }) {
   } else {
     return (
       <LinearGradient
+        style={{ width: "100%", height: "100%" }}
         colors={[mainLinearGradientColor, secondaryLinearGradientColor]}
       >
-        <View style={{ flex: 1 }}>
+        <ScrollView>
           <Text
             style={{
+              flex: 1,
               position: "absolute",
               top: 50,
               fontSize: 30,
@@ -37,21 +92,29 @@ export default function Skills({ colorTheme, title }) {
           >
             {title}
           </Text>
-          {/* här den wrapper för kunskuper visning */}
+
           <View
             style={{
+              flex: 1,
               position: "absolute",
               width: "100%",
-              height: "5%",
-
+              height: 50,
               top: 130,
               display: "flex",
               flexDirection: "row",
-              justifyContent: "space-between",
+
+              justifyContent: "space-evenly",
             }}
           >
             <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>Student</Text>
+              <Text
+                style={{
+                  alignSelf: "center",
+                  color: colorTheme === "#000" ? "#000" : "#fff",
+                }}
+              >
+                Student
+              </Text>
               <View
                 style={{
                   display: "flex",
@@ -63,7 +126,14 @@ export default function Skills({ colorTheme, title }) {
               </View>
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>Entry</Text>
+              <Text
+                style={{
+                  alignSelf: "center",
+                  color: colorTheme === "#000" ? "#000" : "#fff",
+                }}
+              >
+                Entry
+              </Text>
               <View
                 style={{
                   display: "flex",
@@ -76,7 +146,14 @@ export default function Skills({ colorTheme, title }) {
               </View>
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>Junior</Text>
+              <Text
+                style={{
+                  alignSelf: "center",
+                  color: colorTheme === "#000" ? "#000" : "#fff",
+                }}
+              >
+                Junior
+              </Text>
               <View
                 style={{
                   display: "flex",
@@ -91,7 +168,14 @@ export default function Skills({ colorTheme, title }) {
               </View>
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>Senior</Text>
+              <Text
+                style={{
+                  alignSelf: "center",
+                  color: colorTheme === "#000" ? "#000" : "#fff",
+                }}
+              >
+                Senior
+              </Text>
               <View
                 style={{
                   display: "flex",
@@ -107,7 +191,14 @@ export default function Skills({ colorTheme, title }) {
               </View>
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>Master</Text>
+              <Text
+                style={{
+                  alignSelf: "center",
+                  color: colorTheme === "#000" ? "#000" : "#fff",
+                }}
+              >
+                Master
+              </Text>
               <View
                 style={{
                   display: "flex",
@@ -123,7 +214,7 @@ export default function Skills({ colorTheme, title }) {
               </View>
             </View>
           </View>
-          {/* här sluta den wrapper för kunskuper visning */}
+
           <Text
             style={{
               position: "absolute",
@@ -133,7 +224,6 @@ export default function Skills({ colorTheme, title }) {
               fontWeight: "bold",
               alignSelf: "center",
               fontFamily: "Orbitron_500Medium",
-              backgroundColor: "blue",
             }}
           >
             UX
@@ -149,38 +239,25 @@ export default function Skills({ colorTheme, title }) {
               flexDirection: "row",
             }}
           >
-            <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>Figma</Text>
-              <Image
-                style={{
-                  width: 30,
-                  height: 30,
-                  alignSelf: "center",
-                  marginBottom: 5,
-                }}
-                source={require("../assets/src/figma.png")}
-              />
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
+            {element(
+              " Figma",
+              require("../assets/src/figma.png"),
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow"
+            )}
           </View>
           <Text
             style={{
               position: "absolute",
-              top: 260,
+              top: 250,
               fontSize: 20,
               color: colorTheme,
               fontWeight: "bold",
               alignSelf: "center",
               fontFamily: "Orbitron_500Medium",
-              backgroundColor: "blue",
             }}
           >
             FrontEnd
@@ -197,178 +274,71 @@ export default function Skills({ colorTheme, title }) {
               justifyContent: "space-between",
             }}
           >
-            <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>HTML 5</Text>
-              <Image
-                style={{
-                  width: 30,
-                  height: 30,
-                  alignSelf: "center",
-                  marginBottom: 5,
-                }}
-                source={require("../assets/src/html.png")}
-              />
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>CSS</Text>
-              <Image
-                style={{
-                  width: 30,
-                  height: 30,
-                  alignSelf: "center",
-                  marginBottom: 5,
-                }}
-                source={require("../assets/src/css.png")}
-              />
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>SASS</Text>
-              <Image
-                style={{
-                  width: 30,
-                  height: 30,
-                  alignSelf: "center",
-                  marginBottom: 5,
-                }}
-                source={require("../assets/src/sass.png")}
-              />
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>JavaScript</Text>
-              <Image
-                style={{
-                  width: 30,
-                  height: 30,
-                  alignSelf: "center",
-                  marginBottom: 5,
-                }}
-                source={require("../assets/src/javascript.png")}
-              />
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>React</Text>
-              <Image
-                style={{
-                  width: 30,
-                  height: 30,
-                  alignSelf: "center",
-                  marginBottom: 5,
-                }}
-                source={require("../assets/src/react.png")}
-              />
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
+            {element(
+              " HTML5",
+              require("../assets/src/html.png"),
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow"
+            )}
+            {element(
+              "CSS",
+              require("../assets/src/css.png"),
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow"
+            )}
+            {element(
+              "SASS",
+              require("../assets/src/sass.png"),
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow"
+            )}
+            {element(
+              "JavaScript",
+              require("../assets/src/javascript.png"),
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow"
+            )}
+            {element(
+              "React",
+              require("../assets/src/react.png"),
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow"
+            )}
           </View>
           <View
             style={{
               position: "absolute",
-              width: "40%",
+              width: "20%",
               height: "10%",
-              backgroundColor: "grey",
               top: 355,
               display: "flex",
               flexDirection: "row",
             }}
           >
-            <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>Redux</Text>
-              <Image
-                style={{
-                  width: 30,
-                  height: 30,
-                  alignSelf: "center",
-                  marginBottom: 5,
-                }}
-                source={require("../assets/src/redux.png")}
-              />
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>Native</Text>
-              <Image
-                style={{
-                  width: 30,
-                  height: 30,
-                  alignSelf: "center",
-                  marginBottom: 5,
-                }}
-                source={require("../assets/src/native.png")}
-              />
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
+            {element(
+              "Redux",
+              require("../assets/src/redux.png"),
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow"
+            )}
           </View>
           <Text
             style={{
@@ -379,7 +349,6 @@ export default function Skills({ colorTheme, title }) {
               fontWeight: "bold",
               alignSelf: "center",
               fontFamily: "Orbitron_500Medium",
-              backgroundColor: "blue",
             }}
           >
             APP
@@ -389,44 +358,30 @@ export default function Skills({ colorTheme, title }) {
               position: "absolute",
               width: "20%",
               height: "10%",
-              backgroundColor: "grey",
               top: 450,
               display: "flex",
               flexDirection: "row",
             }}
           >
-            <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>Redux</Text>
-              <Image
-                style={{
-                  width: 30,
-                  height: 30,
-                  alignSelf: "center",
-                  marginBottom: 5,
-                }}
-                source={require("../assets/src/redux.png")}
-              />
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
+            {element(
+              "Native",
+              require("../assets/src/native.png"),
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow"
+            )}
           </View>
           <Text
             style={{
               position: "absolute",
-              top: 520,
+              top: 500,
               fontSize: 20,
               color: colorTheme,
               fontWeight: "bold",
               alignSelf: "center",
               fontFamily: "Orbitron_500Medium",
-              backgroundColor: "blue",
             }}
           >
             BackEnd
@@ -437,85 +392,48 @@ export default function Skills({ colorTheme, title }) {
               width: "60%",
               height: "10%",
               backgroundColor: "grey",
-              top: 545,
+              top: 530,
               display: "flex",
               flexDirection: "row",
             }}
           >
-            <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>Redux</Text>
-              <Image
-                style={{
-                  width: 30,
-                  height: 30,
-                  alignSelf: "center",
-                  marginBottom: 5,
-                }}
-                source={require("../assets/src/redux.png")}
-              />
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>Redux</Text>
-              <Image
-                style={{
-                  width: 30,
-                  height: 30,
-                  alignSelf: "center",
-                  marginBottom: 5,
-                }}
-                source={require("../assets/src/redux.png")}
-              />
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>Redux</Text>
-              <Image
-                style={{
-                  width: 30,
-                  height: 30,
-                  alignSelf: "center",
-                  marginBottom: 5,
-                }}
-                source={require("../assets/src/redux.png")}
-              />
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
+            {element(
+              "Node.JS",
+              require("../assets/src/node.png"),
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow"
+            )}
+            {element(
+              "Express",
+              require("../assets/src/express.png"),
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow"
+            )}
+            {element(
+              "Strapi",
+              require("../assets/src/strapi.png"),
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow"
+            )}
           </View>
           <Text
             style={{
               position: "absolute",
-              top: 615,
+              top: 600,
               fontSize: 20,
               color: colorTheme,
               fontWeight: "bold",
               alignSelf: "center",
               fontFamily: "Orbitron_500Medium",
-              backgroundColor: "blue",
             }}
           >
             Database
@@ -526,55 +444,31 @@ export default function Skills({ colorTheme, title }) {
               width: "40%",
               height: "10%",
               backgroundColor: "grey",
-              top: 640,
+              top: 630,
               display: "flex",
               flexDirection: "row",
             }}
           >
-            <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>Redux</Text>
-              <Image
-                style={{
-                  width: 30,
-                  height: 30,
-                  alignSelf: "center",
-                  marginBottom: 5,
-                }}
-                source={require("../assets/src/redux.png")}
-              />
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={{ alignSelf: "center" }}>Redux</Text>
-              <Image
-                style={{
-                  width: 30,
-                  height: 30,
-                  alignSelf: "center",
-                  marginBottom: 5,
-                }}
-                source={require("../assets/src/redux.png")}
-              />
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                }}
-              >
-                <FontAwesome name="star" size={10} color="yellow" />
-              </View>
-            </View>
+            {element(
+              "Mongo DB",
+              require("../assets/src/mongodb.png"),
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow"
+            )}
+            {element(
+              "Mongoose",
+              require("../assets/src/mongoose.png"),
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow",
+              "yellow"
+            )}
           </View>
-        </View>
+        </ScrollView>
       </LinearGradient>
     );
   }

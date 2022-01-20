@@ -43,14 +43,14 @@ export default function Skills({ colorTheme, title }) {
               position: "absolute",
               width: "100%",
               height: "5%",
-              backgroundColor: "grey",
+
               top: 130,
               display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
             }}
           >
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>Student</Text>
               <View
                 style={{
@@ -62,7 +62,7 @@ export default function Skills({ colorTheme, title }) {
                 <FontAwesome name="star" size={10} color="yellow" />
               </View>
             </View>
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>Entry</Text>
               <View
                 style={{
@@ -75,7 +75,7 @@ export default function Skills({ colorTheme, title }) {
                 <FontAwesome name="star" size={10} color="yellow" />
               </View>
             </View>
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>Junior</Text>
               <View
                 style={{
@@ -90,7 +90,7 @@ export default function Skills({ colorTheme, title }) {
                 <FontAwesome name="star" size={10} color="yellow" />
               </View>
             </View>
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>Senior</Text>
               <View
                 style={{
@@ -106,7 +106,7 @@ export default function Skills({ colorTheme, title }) {
                 <FontAwesome name="star" size={10} color="yellow" />
               </View>
             </View>
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>Master</Text>
               <View
                 style={{
@@ -149,7 +149,7 @@ export default function Skills({ colorTheme, title }) {
               flexDirection: "row",
             }}
           >
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>Figma</Text>
               <Image
                 style={{
@@ -197,7 +197,7 @@ export default function Skills({ colorTheme, title }) {
               justifyContent: "space-between",
             }}
           >
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>HTML 5</Text>
               <Image
                 style={{
@@ -218,7 +218,7 @@ export default function Skills({ colorTheme, title }) {
                 <FontAwesome name="star" size={10} color="yellow" />
               </View>
             </View>
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>CSS</Text>
               <Image
                 style={{
@@ -240,7 +240,7 @@ export default function Skills({ colorTheme, title }) {
                 <FontAwesome name="star" size={10} color="yellow" />
               </View>
             </View>
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>SASS</Text>
               <Image
                 style={{
@@ -264,7 +264,7 @@ export default function Skills({ colorTheme, title }) {
                 <FontAwesome name="star" size={10} color="yellow" />
               </View>
             </View>
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>JavaScript</Text>
               <Image
                 style={{
@@ -289,7 +289,7 @@ export default function Skills({ colorTheme, title }) {
                 <FontAwesome name="star" size={10} color="yellow" />
               </View>
             </View>
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>React</Text>
               <Image
                 style={{
@@ -326,7 +326,7 @@ export default function Skills({ colorTheme, title }) {
               flexDirection: "row",
             }}
           >
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>Redux</Text>
               <Image
                 style={{
@@ -347,7 +347,7 @@ export default function Skills({ colorTheme, title }) {
                 <FontAwesome name="star" size={10} color="yellow" />
               </View>
             </View>
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>Native</Text>
               <Image
                 style={{
@@ -395,7 +395,7 @@ export default function Skills({ colorTheme, title }) {
               flexDirection: "row",
             }}
           >
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>Redux</Text>
               <Image
                 style={{
@@ -442,7 +442,7 @@ export default function Skills({ colorTheme, title }) {
               flexDirection: "row",
             }}
           >
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>Redux</Text>
               <Image
                 style={{
@@ -463,7 +463,7 @@ export default function Skills({ colorTheme, title }) {
                 <FontAwesome name="star" size={10} color="yellow" />
               </View>
             </View>
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>Redux</Text>
               <Image
                 style={{
@@ -484,7 +484,7 @@ export default function Skills({ colorTheme, title }) {
                 <FontAwesome name="star" size={10} color="yellow" />
               </View>
             </View>
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>Redux</Text>
               <Image
                 style={{
@@ -531,7 +531,7 @@ export default function Skills({ colorTheme, title }) {
               flexDirection: "row",
             }}
           >
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>Redux</Text>
               <Image
                 style={{
@@ -552,7 +552,7 @@ export default function Skills({ colorTheme, title }) {
                 <FontAwesome name="star" size={10} color="yellow" />
               </View>
             </View>
-            <View style={{ flex: 1, color: "#FFF" }}>
+            <View style={{ flex: 1 }}>
               <Text style={{ alignSelf: "center" }}>Redux</Text>
               <Image
                 style={{

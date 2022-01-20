@@ -6,6 +6,13 @@ import { FontAwesome } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function Skills({ colorTheme, title }) {
+  let mainLinearGradientColor = "#000";
+  let secondaryLinearGradientColor = "grey";
+  if (colorTheme === "#000") {
+    mainLinearGradientColor = "grey";
+    secondaryLinearGradientColor = "#fff";
+  }
+
   let [fontsLoaded] = useFonts({
     Orbitron_500Medium,
   });

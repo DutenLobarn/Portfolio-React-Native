@@ -124,7 +124,6 @@ export default function App() {
           top: 50,
           left: 30,
           width: 35,
-          height: 200,
         }}
       >
         <Image
@@ -133,6 +132,7 @@ export default function App() {
             width: 35,
             height: 35,
             marginBottom: 10,
+            borderRadius: 5,
           }}
         />
         <AntDesign
@@ -153,7 +153,7 @@ export default function App() {
               >
                 <Image
                   source={require("./assets/src/albania.png")}
-                  style={{ width: 35, height: 35 }}
+                  style={{ width: 35, height: 35, borderRadius: 5 }}
                 />
               </TouchableOpacity>
 
@@ -165,7 +165,7 @@ export default function App() {
               >
                 <Image
                   source={require("./assets/src/engelishflag.png")}
-                  style={{ width: 35, height: 35, paddingTop: 10, padding: 10 }}
+                  style={{ width: 35, height: 35, borderRadius: 5 }}
                 />
               </TouchableOpacity>
 
@@ -177,7 +177,7 @@ export default function App() {
               >
                 <Image
                   source={require("./assets/src/chinaflag.png")}
-                  style={{ width: 35, height: 35 }}
+                  style={{ width: 35, height: 35, borderRadius: 5 }}
                 />
               </TouchableOpacity>
 
@@ -189,7 +189,7 @@ export default function App() {
               >
                 <Image
                   source={require("./assets/src/swedishflag.png")}
-                  style={{ width: 35, height: 35 }}
+                  style={{ width: 35, height: 35, borderRadius: 5 }}
                 />
               </TouchableOpacity>
             </Text>

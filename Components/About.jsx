@@ -8,7 +8,7 @@ export default function About({ colorTheme, title }) {
         style={{
           position: "absolute",
           top: 49,
-          right: 192,
+          alignSelf: "center",
           fontSize: 30,
           color: colorTheme,
           fontWeight: "bold",

@@ -8,7 +8,7 @@ export default function Projects({ colorTheme, title }) {
         style={{
           position: "absolute",
           top: 49,
-          right: 169,
+          alignSelf:"center",
           fontSize: 30,
           color: colorTheme,
           fontWeight: "bold",

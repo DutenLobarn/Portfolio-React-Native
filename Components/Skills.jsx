@@ -91,6 +91,7 @@ export default function Skills({ colorTheme, title }) {
           color: colorTheme,
           fontWeight: "bold",
           paddingTop: 10,
+          marginBottom: 20,
           fontFamily: "Orbitron_500Medium",
           textAlign: "center",
         }}
@@ -373,7 +374,7 @@ export default function Skills({ colorTheme, title }) {
               height: "10%",
               display: "flex",
               flexDirection: "row",
-              marginBottom: 100,
+              marginBottom: 180,
             }}
           >
             {element(

@@ -3,6 +3,7 @@ import { Text, View, Image } from "react-native";
 import AppLoading from "expo-app-loading";
 import { useFonts, Orbitron_500Medium } from "@expo-google-fonts/orbitron";
 import { FontAwesome } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
 
 export default function Skills({ colorTheme, title }) {
   let [fontsLoaded] = useFonts({

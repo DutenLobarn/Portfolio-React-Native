@@ -94,7 +94,13 @@ export default function App() {
         />
         <Tab.Screen
           name="About"
-          children={() => <About colorTheme={colorTheme} title={"Om"} />}
+          children={() => (
+            <About
+              colorTheme={colorTheme}
+              title={"Om"}
+              btnBackground={navBackgroundColor}
+            />
+          )}
           options={{
             tabBarIcon: ({ focused }) => (
               <FontAwesome5

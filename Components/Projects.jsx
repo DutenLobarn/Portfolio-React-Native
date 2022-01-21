@@ -88,7 +88,7 @@ export default function Projects({ colorTheme, btnBackground, title }) {
         >
           <View
             style={{
-              maxWidth: 300,
+              maxWidth: 270,
               padding: 20,
             }}
           >

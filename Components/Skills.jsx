@@ -1,18 +1,13 @@
 import React from "react";
-import {
-  Text,
-  View,
-  Image,
-  ScrollView,
-  SafeAreaView,
-  StatusBar,
-} from "react-native";
+import { Text, View, Image, ScrollView } from "react-native";
 import AppLoading from "expo-app-loading";
 import { useFonts, Orbitron_500Medium } from "@expo-google-fonts/orbitron";
 import { FontAwesome } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function Skills({ colorTheme, title }) {
+  // here I made a function so you can cut down code
+
   const element = (
     title,
     imagePath,
@@ -42,8 +37,8 @@ export default function Skills({ colorTheme, title }) {
         <Image
           resizeMode="stretch"
           style={{
-            width: 30,
-            height: 30,
+            width: 40,
+            height: 40,
             alignSelf: "center",
             marginBottom: 5,
             borderRadius: 5,
@@ -68,6 +63,8 @@ export default function Skills({ colorTheme, title }) {
     );
   };
 
+  //here I cut down code for level skills
+
   const levelSkills = (text) => {
     return (
       <Text
@@ -81,6 +78,8 @@ export default function Skills({ colorTheme, title }) {
     );
   };
 
+  // here I cut down code for skills headline title
+
   const skillsHeadLine = (headLineTitle) => {
     return (
       <Text
@@ -91,7 +90,7 @@ export default function Skills({ colorTheme, title }) {
           color: colorTheme,
           fontWeight: "bold",
           paddingTop: 10,
-          marginBottom: 20,
+          marginBottom: 10,
           fontFamily: "Orbitron_500Medium",
           textAlign: "center",
         }}
@@ -101,11 +100,15 @@ export default function Skills({ colorTheme, title }) {
     );
   };
 
+  // here I made a varabier to toggle star color
+  const colorStar = colorTheme === "#000" ? "#000" : "#fff";
+
+  // here the toggle for dark and light mode background color with linear
   let mainLinearGradientColor = "#000";
   let secondaryLinearGradientColor = "grey";
   if (colorTheme === "#000") {
-    mainLinearGradientColor = "grey";
-    secondaryLinearGradientColor = "#fff";
+    mainLinearGradientColor = "#fff";
+    secondaryLinearGradientColor = "grey";
   }
 
   let [fontsLoaded] = useFonts({
@@ -117,22 +120,22 @@ export default function Skills({ colorTheme, title }) {
     return (
       <LinearGradient
         style={{ flex: 1 }}
-        colors={[secondaryLinearGradientColor, mainLinearGradientColor]}
+        colors={[mainLinearGradientColor, secondaryLinearGradientColor]}
       >
-        <Text
-          style={{
-            paddingTop: 50,
-            fontSize: 30,
-            color: colorTheme,
-            fontWeight: "bold",
-            textAlign: "center",
-            fontFamily: "Orbitron_500Medium",
-          }}
-        >
-          {title}
-        </Text>
-
         <ScrollView style={{ flex: 1 }}>
+          <Text
+            style={{
+              paddingTop: 50,
+              fontSize: 30,
+              color: colorTheme,
+              fontWeight: "bold",
+              textAlign: "center",
+              fontFamily: "Orbitron_500Medium",
+            }}
+          >
+            {title}
+          </Text>
+
           <View
             style={{
               height: 100,
@@ -170,6 +173,7 @@ export default function Skills({ colorTheme, title }) {
                 <FontAwesome name="star" size={10} color="gold" />
               </View>
             </View>
+
             <View style={{ flex: 1 }}>
               {levelSkills("Junior")}
 
@@ -185,6 +189,7 @@ export default function Skills({ colorTheme, title }) {
                 <FontAwesome name="star" size={10} color="gold" />
               </View>
             </View>
+
             <View style={{ flex: 1 }}>
               {levelSkills("Senior")}
               <View
@@ -200,6 +205,7 @@ export default function Skills({ colorTheme, title }) {
                 <FontAwesome name="star" size={10} color="gold" />
               </View>
             </View>
+
             <View style={{ flex: 1 }}>
               {levelSkills("Master")}
               <View
@@ -217,6 +223,7 @@ export default function Skills({ colorTheme, title }) {
               </View>
             </View>
           </View>
+
           {skillsHeadLine("UX")}
 
           <View
@@ -232,12 +239,14 @@ export default function Skills({ colorTheme, title }) {
               require("../assets/src/figma.png"),
               "gold",
               "gold",
-              "gold",
-              "gold",
-              "gold"
+              colorStar,
+              colorStar,
+              colorStar
             )}
           </View>
+
           {skillsHeadLine("FrontEnd")}
+
           <View
             style={{
               width: "100%",
@@ -253,26 +262,26 @@ export default function Skills({ colorTheme, title }) {
               "gold",
               "gold",
               "gold",
-              "gold",
-              "gold"
+              colorStar,
+              colorStar
             )}
             {element(
               "CSS",
               require("../assets/src/css.png"),
               "gold",
               "gold",
-              "gold",
-              "gold",
-              "gold"
+              colorStar,
+              colorStar,
+              colorStar
             )}
             {element(
               "SASS",
               require("../assets/src/sass.png"),
               "gold",
               "gold",
-              "gold",
-              "gold",
-              "gold"
+              colorStar,
+              colorStar,
+              colorStar
             )}
             {element(
               "JavaScript",
@@ -280,8 +289,8 @@ export default function Skills({ colorTheme, title }) {
               "gold",
               "gold",
               "gold",
-              "gold",
-              "gold"
+              colorStar,
+              colorStar
             )}
             {element(
               "React",
@@ -289,10 +298,11 @@ export default function Skills({ colorTheme, title }) {
               "gold",
               "gold",
               "gold",
-              "gold",
-              "gold"
+              colorStar,
+              colorStar
             )}
           </View>
+
           <View
             style={{
               width: "20%",
@@ -307,11 +317,13 @@ export default function Skills({ colorTheme, title }) {
               "gold",
               "gold",
               "gold",
-              "gold",
-              "gold"
+              colorStar,
+              colorStar
             )}
           </View>
+
           {skillsHeadLine("APP")}
+
           <View
             style={{
               width: "100%",
@@ -325,12 +337,14 @@ export default function Skills({ colorTheme, title }) {
               require("../assets/src/native.png"),
               "gold",
               "gold",
-              "gold",
-              "gold",
-              "gold"
+              colorStar,
+              colorStar,
+              colorStar
             )}
           </View>
+
           {skillsHeadLine("BackEnd")}
+
           <View
             style={{
               width: "100%",
@@ -343,57 +357,59 @@ export default function Skills({ colorTheme, title }) {
               "Node.JS",
               require("../assets/src/node.png"),
               "gold",
-              "gold",
-              "gold",
-              "gold",
-              "gold"
+              colorStar,
+              colorStar,
+              colorStar,
+              colorStar
             )}
             {element(
               "Express",
               require("../assets/src/express.png"),
               "gold",
-              "gold",
-              "gold",
-              "gold",
-              "gold"
+              colorStar,
+              colorStar,
+              colorStar,
+              colorStar
             )}
             {element(
               "Strapi",
               require("../assets/src/strapi.png"),
               "gold",
               "gold",
-              "gold",
-              "gold",
-              "gold"
+              colorStar,
+              colorStar,
+              colorStar
             )}
           </View>
+
           {skillsHeadLine("Database")}
+
           <View
             style={{
               width: "100%",
               height: "10%",
               display: "flex",
               flexDirection: "row",
-              marginBottom: 180,
+              marginBottom: 250,
             }}
           >
             {element(
               "Mongo DB",
               require("../assets/src/mongodb.png"),
               "gold",
-              "gold",
-              "gold",
-              "gold",
-              "gold"
+              colorStar,
+              colorStar,
+              colorStar,
+              colorStar
             )}
             {element(
               "Mongoose",
               require("../assets/src/mongoose.png"),
               "gold",
-              "gold",
-              colorTheme === "#000" ? "#000" : "#fff",
-              "gold",
-              "gold"
+              colorStar,
+              colorStar,
+              colorStar,
+              colorStar
             )}
           </View>
         </ScrollView>

@@ -1,8 +1,25 @@
-import React from "react";
-import { Text, ScrollView, ImageBackground } from "react-native";
+import React, { useState } from "react";
+
+import {
+  Text,
+  ScrollView,
+  ImageBackground,
+  View,
+  Pressable,
+  Linking,
+  Alert,
+} from "react-native";
+
+import { AntDesign } from "@expo/vector-icons";
+
 import { LinearGradient } from "expo-linear-gradient";
 
-export default function Projects({ colorTheme, title }) {
+export default function Projects({ colorTheme, btnBackground, title }) {
+  const [toggleProject1, setToggleProject1] = useState(false);
+  const [toggleProject2, setToggleProject2] = useState(false);
+  const [toggleProject3, setToggleProject3] = useState(false);
+  const [toggleProject4, setToggleProject4] = useState(false);
+
   const image = {
     uri: "https://mandus-portfolio-cv.herokuapp.com/static/media/storagerental.d587157f.png",
   };
@@ -12,36 +29,174 @@ export default function Projects({ colorTheme, title }) {
   const image3 = {
     uri: "https://mandus-portfolio-cv.herokuapp.com/static/media/sinuswebshop.a5e952bd.png",
   };
-  const image4 = {
-    uri: "https://mandus-portfolio-cv.herokuapp.com/static/media/airbean.64ae95b3.png",
-  };
+  const image4 = require("../assets/src/foretagssida-webshop.png");
+
   let mainLinearGradientColor = "#000";
   let secondaryLinearGradientColor = "grey";
   if (colorTheme === "#000") {
-    mainLinearGradientColor = "grey";
-    secondaryLinearGradientColor = "#fff";
+    mainLinearGradientColor = "#fff";
+    secondaryLinearGradientColor = "grey";
   }
+
+  const project = (img, toggleProject, bolean) => {
+    return (
+      <Pressable onPress={() => toggleProject(!bolean)}>
+        <ImageBackground
+          source={img}
+          resizeMode="stretch"
+          style={{
+            height: 300,
+            width: 250,
+            alignSelf: "center",
+            marginBottom: 40,
+          }}
+        ></ImageBackground>
+      </Pressable>
+    );
+  };
+
+  const moreProjectInfo = (
+    projectTitle,
+    url,
+    gitHubUrl,
+    projectImg,
+    projectDescriptionTitle,
+    projectDescription,
+    toggleProject,
+    bolean
+  ) => {
+    return (
+      <View
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
+        }}
+      >
+        <LinearGradient
+          colors={[mainLinearGradientColor, "#2E3138"]}
+          style={{
+            borderRadius: 20,
+            borderWidth: 2,
+            borderColor: colorTheme,
+          }}
+        >
+          <View
+            style={{
+              maxWidth: 300,
+              padding: 20,
+            }}
+          >
+            <Text
+              style={{
+                color: { colorTheme },
+                alignSelf: "center",
+                marginBottom: 20,
+                fontSize: 24,
+                color: colorTheme,
+              }}
+            >
+              {projectTitle}
+            </Text>
+            <Pressable
+              onPress={() => {
+                if (url) {
+                  Linking.openURL(url);
+                } else {
+                  Alert.alert(
+                    "Detta projekt har ingen live sida att visa upp."
+                  );
+                }
+              }}
+            >
+              <ImageBackground
+                source={projectImg}
+                resizeMode="stretch"
+                style={{
+                  height: 200,
+                  width: 200,
+                  alignSelf: "center",
+                  marginBottom: 20,
+                }}
+              ></ImageBackground>
+            </Pressable>
+            <Text
+              style={{
+                alignSelf: "center",
+                marginBottom: 10,
+                fontSize: 20,
+                color: colorTheme,
+              }}
+            >
+              {projectDescriptionTitle}
+            </Text>
+            <Text
+              style={{
+                alignSelf: "center",
+                marginBottom: 10,
+                fontSize: 16,
+                color: colorTheme,
+              }}
+            >
+              {projectDescription}
+            </Text>
+            <AntDesign
+              onPress={() => {
+                if (gitHubUrl) {
+                  Linking.openURL(gitHubUrl);
+                } else {
+                  Alert.alert("Detta projekt har inget repo att visa upp.");
+                }
+              }}
+              style={{
+                alignSelf: "center",
+                marginBottom: 10,
+              }}
+              name="github"
+              size={30}
+              color={colorTheme}
+            />
+            <Pressable
+              onPress={() => toggleProject(!bolean)}
+              title="Close Window"
+              style={{
+                paddingVertical: 10,
+                paddingHorizontal: 30,
+                alignSelf: "center",
+                backgroundColor: btnBackground,
+                borderRadius: 5,
+              }}
+            >
+              <Text
+                style={{
+                  fontSize: 20,
+                  color: colorTheme,
+                }}
+              >
+                Close Window
+              </Text>
+            </Pressable>
+          </View>
+        </LinearGradient>
+      </View>
+    );
+  };
+
   return (
     <LinearGradient
       colors={[mainLinearGradientColor, secondaryLinearGradientColor]}
     >
-      <ScrollView
-        style={
-          {
-            // flex: 1,
-            // flexGrow: 1,
-            // height: "100%",
-            // backgroundColor: "green",
-            // marginBottom: -120,
-          }
-        }
-        contentContainerStyle={{ paddingVertical: 128 }}
-      >
+      <ScrollView contentContainerStyle={{ paddingVertical: 128 }}>
         <Text
           style={{
             position: "absolute",
             top: 49,
-            right: 169,
+            alignSelf: "center",
             fontSize: 30,
             color: colorTheme,
             fontWeight: "bold",
@@ -49,50 +204,72 @@ export default function Projects({ colorTheme, title }) {
         >
           {title}
         </Text>
-        <ImageBackground
-          source={image}
-          resizeMode="stretch"
-          style={{
-            height: 300,
-            width: 250,
-            alignSelf: "center",
-            marginBottom: 40,
-          }}
-          // imageStyle
-        ></ImageBackground>
-        <ImageBackground
-          source={image2}
-          resizeMode="stretch"
-          style={{
-            height: 300,
-            width: 250,
-            alignSelf: "center",
-            marginBottom: 40,
-          }}
-        ></ImageBackground>
-        <ImageBackground
-          source={image3}
-          resizeMode="stretch"
-          style={{
-            height: 300,
-            width: 250,
-            alignSelf: "center",
-            flexDirection: "column",
-            marginBottom: 40,
-          }}
-        ></ImageBackground>
-        <ImageBackground
-          source={image4}
-          resizeMode="stretch"
-          style={{
-            height: 300,
-            width: 250,
-            alignSelf: "center",
-            flexDirection: "column",
-            marginBottom: 40,
-          }}
-        ></ImageBackground>
+
+        {project(image, setToggleProject1, toggleProject1)}
+        {project(image2, setToggleProject2, toggleProject2)}
+        {project(image3, setToggleProject3, toggleProject3)}
+        {project(image4, setToggleProject4, toggleProject4)}
       </ScrollView>
+
+      {toggleProject1 ? (
+        moreProjectInfo(
+          "Storage Rental",
+          "https://storage-rental.herokuapp.com/",
+          "https://github.com/DutenLobarn/StorageRentalPage",
+          image,
+          "A webpage for my brother.",
+          "In this projekt my goal was to brush up on my React and Redux skills and also automatize email corresponding with potentional costumer.",
+          setToggleProject1,
+          toggleProject1
+        )
+      ) : (
+        <Text></Text>
+      )}
+
+      {toggleProject2 ? (
+        moreProjectInfo(
+          "The Landloard",
+          "https://mandus.herokuapp.com/",
+          "https://github.com/DutenLobarn/App-for-a-landlord-company",
+          image2,
+          "Also a webpage for my brother.",
+          "In this projekt my goal was to brush up on my HTML and CSS skills and also play around with the CSS. Far from done!",
+          setToggleProject2,
+          toggleProject2
+        )
+      ) : (
+        <Text></Text>
+      )}
+
+      {toggleProject3 ? (
+        moreProjectInfo(
+          "Node Teamwork.",
+          "",
+          "https://github.com/DutenLobarn/nackademin-slutprojekt-backend-Grupparbete-Domus",
+          image3,
+          "Also a webpage for my brother.33333",
+          "Me and another student got a finished FrontEnd (Vue) and worked with Node JS, Mongoose and MongoDB for the school exam. Very fun project and awesome collaboration!",
+          setToggleProject3,
+          toggleProject3
+        )
+      ) : (
+        <Text></Text>
+      )}
+
+      {toggleProject4 ? (
+        moreProjectInfo(
+          "React Teamwork",
+          "",
+          "https://github.com/DutenLobarn/Projekt-foretagssida",
+          image4,
+          "Also a webpage for my brother.4444",
+          "Me and 3 students got a Figma sketch that our final result should look like. First time using testing. Easy exercise i think.",
+          setToggleProject4,
+          toggleProject4
+        )
+      ) : (
+        <Text></Text>
+      )}
     </LinearGradient>
   );
 }

@@ -48,7 +48,11 @@ export default function App() {
         <Tab.Screen
           name="Projects"
           children={() => (
-            <Projects colorTheme={colorTheme} title={"Projekt"} />
+            <Projects
+              colorTheme={colorTheme}
+              btnBackground={navBackgroundColor}
+              title={"Projekt"}
+            />
           )}
           options={{
             tabBarIcon: ({ focused }) => (
@@ -133,6 +137,7 @@ export default function App() {
             width: 35,
             height: 35,
             marginBottom: 10,
+            resizeMode: "stretch",
           }}
         />
         <AntDesign
@@ -153,7 +158,7 @@ export default function App() {
               >
                 <Image
                   source={require("./assets/src/albania.png")}
-                  style={{ width: 35, height: 35 }}
+                  style={{ width: 35, height: 35, resizeMode: "stretch" }}
                 />
               </TouchableOpacity>
 
@@ -165,7 +170,13 @@ export default function App() {
               >
                 <Image
                   source={require("./assets/src/engelishflag.png")}
-                  style={{ width: 35, height: 35, paddingTop: 10, padding: 10 }}
+                  style={{
+                    width: 35,
+                    height: 35,
+                    paddingTop: 10,
+                    padding: 10,
+                    resizeMode: "stretch",
+                  }}
                 />
               </TouchableOpacity>
 
@@ -177,7 +188,7 @@ export default function App() {
               >
                 <Image
                   source={require("./assets/src/chinaflag.png")}
-                  style={{ width: 35, height: 35 }}
+                  style={{ width: 35, height: 35, resizeMode: "stretch" }}
                 />
               </TouchableOpacity>
 
@@ -189,7 +200,7 @@ export default function App() {
               >
                 <Image
                   source={require("./assets/src/swedishflag.png")}
-                  style={{ width: 35, height: 35 }}
+                  style={{ width: 35, height: 35, resizeMode: "stretch" }}
                 />
               </TouchableOpacity>
             </Text>

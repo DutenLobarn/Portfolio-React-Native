@@ -107,7 +107,13 @@ export default function App() {
         />
         <Tab.Screen
           name="Contact"
-          children={() => <Contact colorTheme={colorTheme} title={"Kontakt"} />}
+          children={() => (
+            <Contact
+              colorTheme={colorTheme}
+              title={"Kontakt"}
+              btnBackground={navBackgroundColor}
+            />
+          )}
           options={{
             tabBarIcon: ({ focused }) => (
               <MaterialIcons

@@ -118,7 +118,10 @@ export default function App() {
         <Tab.Screen
           name="Contact"
           children={() => (
-            <Contact colorTheme={colorTheme} title={t("contactPage.title")} />
+
+            <Contact colorTheme={colorTheme} title={t("contactPage.title")} btnBackground={navBackgroundColor} />
+
+
           )}
           options={{
             tabBarIcon: ({ focused }) => (

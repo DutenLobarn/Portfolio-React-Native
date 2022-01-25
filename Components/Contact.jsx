@@ -4,11 +4,15 @@ import AppLoading from "expo-app-loading";
 import { LinearGradient } from "expo-linear-gradient";
 import { useFonts, Orbitron_500Medium } from "@expo-google-fonts/orbitron";
 
+import { useTranslation } from "react-i18next";
+
 export default function Contact({ colorTheme, title }) {
   const [firstName, setFirstName] = useState("");
   const [Lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const { t } = useTranslation();
 
   console.log(firstName);
   console.log(Lastname);
@@ -82,7 +86,7 @@ export default function Contact({ colorTheme, title }) {
             justifyContent: "center",
             alignItems: "center",
             marginTop: 20,
-            borderRadius: "100%",
+            borderRadius: 100,
           }}
         >
           <Image
@@ -95,8 +99,8 @@ export default function Contact({ colorTheme, title }) {
         </View>
 
         <View>
-          {textInput("Firstname", setFirstName)}
-          {textInput("Lastname", setLastName)}
+          {textInput(t("contactPage.firstName"), setFirstName)}
+          {textInput(t("contactPage.lastName"), setLastName)}
 
           <TextInput
             placeholder="Email"
@@ -115,7 +119,7 @@ export default function Contact({ colorTheme, title }) {
           />
 
           <TextInput
-            placeholder="Message"
+            placeholder={t("contactPage.message")}
             onChangeText={(text) => {
               setMessage(text);
             }}

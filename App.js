@@ -19,6 +19,9 @@ import Projects from "./Components/Projects.jsx";
 import Skills from "./Components/Skills.jsx";
 import About from "./Components/About.jsx";
 import Contact from "./Components/Contact.jsx";
+// I18next
+import i18n from "./Locales/i18n.jsx";
+import { t } from "i18next";
 
 export default function App() {
   const [toggleFlag, setToggleFlag] = useState(false);
@@ -37,6 +40,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
+        initialRouteName="Home"
         screenOptions={{
           headerShown: false,
           tabBarShowLabel: false,
@@ -51,7 +55,7 @@ export default function App() {
             <Projects
               colorTheme={colorTheme}
               btnBackground={navBackgroundColor}
-              title={"Projekt"}
+              title={t("projectPage.title")}
             />
           )}
           options={{
@@ -67,7 +71,7 @@ export default function App() {
         <Tab.Screen
           name="Skills"
           children={() => (
-            <Skills colorTheme={colorTheme} title={"Färdigheter"} />
+            <Skills colorTheme={colorTheme} title={t("skillsPage.title")} />
           )}
           options={{
             tabBarIcon: ({ focused }) => (
@@ -97,7 +101,7 @@ export default function App() {
           children={() => (
             <About
               colorTheme={colorTheme}
-              title={"Om"}
+              title={t("aboutPage.title")}
               btnBackground={navBackgroundColor}
             />
           )}
@@ -113,7 +117,9 @@ export default function App() {
         />
         <Tab.Screen
           name="Contact"
-          children={() => <Contact colorTheme={colorTheme} title={"Kontakt"} />}
+          children={() => (
+            <Contact colorTheme={colorTheme} title={t("contactPage.title")} />
+          )}
           options={{
             tabBarIcon: ({ focused }) => (
               <MaterialIcons
@@ -160,6 +166,7 @@ export default function App() {
                 onPress={() => {
                   setFlag(require("./assets/src/albania.png")),
                     setToggleFlag(!toggleFlag);
+                  i18n.changeLanguage("al");
                 }}
               >
                 <Image
@@ -177,6 +184,7 @@ export default function App() {
                 onPress={() => {
                   setFlag(require("./assets/src/engelishflag.png")),
                     setToggleFlag(!toggleFlag);
+                  i18n.changeLanguage("en");
                 }}
               >
                 <Image
@@ -196,6 +204,7 @@ export default function App() {
                 onPress={() => {
                   setFlag(require("./assets/src/chinaflag.png")),
                     setToggleFlag(!toggleFlag);
+                  i18n.changeLanguage("ch");
                 }}
               >
                 <Image
@@ -213,6 +222,7 @@ export default function App() {
                 onPress={() => {
                   setFlag(require("./assets/src/swedishflag.png")),
                     setToggleFlag(!toggleFlag);
+                  i18n.changeLanguage("sw");
                 }}
               >
                 <Image

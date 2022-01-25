@@ -5,7 +5,11 @@ import { LinearGradient } from "expo-linear-gradient";
 
 import { AntDesign } from "@expo/vector-icons";
 
+import { useTranslation } from "react-i18next";
+
 export default function About({ colorTheme, title }) {
+  const { t } = useTranslation();
+
   let mainLinearGradientColor = "#000";
   let secondaryLinearGradientColor = "grey";
   if (colorTheme === "#000") {
@@ -47,16 +51,10 @@ export default function About({ colorTheme, title }) {
           {title}
         </Text>
 
-        {textPart("Hello, I´m Mandus Lindström born year 1985 in Sweden.")}
-        {textPart(
-          "I am a FrontEnd student and i am looking for work opportunities."
-        )}
-        {textPart(
-          "I have a big passion for coding and especially to get the coding result in a fast and understandable way, both for my peers and future Mandus Lindström. The most difficult coding problems i think is the most fun."
-        )}
-        {textPart(
-          "One day I will be happy to call myself a fullstack developer. Right now I am enjoying coding with JS and React very much, my BackEnd skills need improvments... With that said i do not have anything against learning new skills, but for now i am focused on deepening my skillset."
-        )}
+        {textPart(t("aboutPage.textPart1"))}
+        {textPart(t("aboutPage.textPart2"))}
+        {textPart(t("aboutPage.textPart3"))}
+        {textPart(t("aboutPage.textPart4"))}
 
         <View
           style={{

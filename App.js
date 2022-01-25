@@ -19,9 +19,6 @@ import Projects from "./Components/Projects.jsx";
 import Skills from "./Components/Skills.jsx";
 import About from "./Components/About.jsx";
 import Contact from "./Components/Contact.jsx";
-// I18next
-import i18n from "./Locales/i18n.jsx";
-import { t } from "i18next";
 
 export default function App() {
   const [toggleFlag, setToggleFlag] = useState(false);
@@ -40,7 +37,6 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName="Home"
         screenOptions={{
           headerShown: false,
           tabBarShowLabel: false,
@@ -55,7 +51,7 @@ export default function App() {
             <Projects
               colorTheme={colorTheme}
               btnBackground={navBackgroundColor}
-              title={t("projectPage.title")}
+              title={"Projekt"}
             />
           )}
           options={{
@@ -71,7 +67,7 @@ export default function App() {
         <Tab.Screen
           name="Skills"
           children={() => (
-            <Skills colorTheme={colorTheme} title={t("skillsPage.title")} />
+            <Skills colorTheme={colorTheme} title={"Färdigheter"} />
           )}
           options={{
             tabBarIcon: ({ focused }) => (
@@ -98,13 +94,7 @@ export default function App() {
         />
         <Tab.Screen
           name="About"
-          children={() => (
-            <About
-              colorTheme={colorTheme}
-              title={t("aboutPage.title")}
-              btnBackground={navBackgroundColor}
-            />
-          )}
+          children={() => <About colorTheme={colorTheme} title={"Om"} />}
           options={{
             tabBarIcon: ({ focused }) => (
               <FontAwesome5
@@ -118,10 +108,15 @@ export default function App() {
         <Tab.Screen
           name="Contact"
           children={() => (
-
-            <Contact colorTheme={colorTheme} title={t("contactPage.title")} btnBackground={navBackgroundColor} />
-
-
+<<<<<<< HEAD
+            <Contact
+              colorTheme={colorTheme}
+              title={"Kontakt"}
+              btnBackground={navBackgroundColor}
+            />
+=======
+            <Contact colorTheme={colorTheme} title={t("contactPage.title")} />
+>>>>>>> parent of 382db26 (Merge branch 'main' into mandus)
           )}
           options={{
             tabBarIcon: ({ focused }) => (
@@ -169,7 +164,6 @@ export default function App() {
                 onPress={() => {
                   setFlag(require("./assets/src/albania.png")),
                     setToggleFlag(!toggleFlag);
-                  i18n.changeLanguage("al");
                 }}
               >
                 <Image
@@ -187,7 +181,6 @@ export default function App() {
                 onPress={() => {
                   setFlag(require("./assets/src/engelishflag.png")),
                     setToggleFlag(!toggleFlag);
-                  i18n.changeLanguage("en");
                 }}
               >
                 <Image
@@ -207,7 +200,6 @@ export default function App() {
                 onPress={() => {
                   setFlag(require("./assets/src/chinaflag.png")),
                     setToggleFlag(!toggleFlag);
-                  i18n.changeLanguage("ch");
                 }}
               >
                 <Image
@@ -225,7 +217,6 @@ export default function App() {
                 onPress={() => {
                   setFlag(require("./assets/src/swedishflag.png")),
                     setToggleFlag(!toggleFlag);
-                  i18n.changeLanguage("sw");
                 }}
               >
                 <Image

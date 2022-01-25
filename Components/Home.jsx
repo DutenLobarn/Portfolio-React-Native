@@ -3,11 +3,8 @@ import React, { useState } from "react";
 import { Text, View, ImageBackground } from "react-native";
 import AppLoading from "expo-app-loading";
 import { useFonts, Orbitron_500Medium } from "@expo-google-fonts/orbitron";
-import { useTranslation } from "react-i18next";
 
 export default function Home({ colorTheme }) {
-  const { t } = useTranslation();
-
   let [fontsLoaded] = useFonts({
     Orbitron_500Medium,
   });
@@ -34,7 +31,7 @@ export default function Home({ colorTheme }) {
               paddingBottom: 20,
             }}
           >
-            {t("homePage.name")}
+            Mandus
           </Text>
           <Text
             style={{
@@ -43,7 +40,7 @@ export default function Home({ colorTheme }) {
               fontFamily: "Orbitron_500Medium",
             }}
           >
-            {t("homePage.frontEnd")}
+            FrontEnd
           </Text>
           <Text
             style={{
@@ -53,7 +50,7 @@ export default function Home({ colorTheme }) {
               lineHeight: 38,
             }}
           >
-            {t("homePage.webApp")}
+            Web och App
           </Text>
           <Text
             style={{
@@ -62,7 +59,7 @@ export default function Home({ colorTheme }) {
               fontFamily: "Orbitron_500Medium",
             }}
           >
-            {t("homePage.development")}
+            Utveckling
           </Text>
         </View>
       </ImageBackground>

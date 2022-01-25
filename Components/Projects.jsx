@@ -14,10 +14,7 @@ import { AntDesign } from "@expo/vector-icons";
 
 import { LinearGradient } from "expo-linear-gradient";
 
-import { useTranslation } from "react-i18next";
-
 export default function Projects({ colorTheme, btnBackground, title }) {
-  const { t } = useTranslation();
   const [toggleProject1, setToggleProject1] = useState(false);
   const [toggleProject2, setToggleProject2] = useState(false);
   const [toggleProject3, setToggleProject3] = useState(false);
@@ -91,7 +88,7 @@ export default function Projects({ colorTheme, btnBackground, title }) {
         >
           <View
             style={{
-              maxWidth: 270,
+              maxWidth: 300,
               padding: 20,
             }}
           >
@@ -181,7 +178,7 @@ export default function Projects({ colorTheme, btnBackground, title }) {
                   color: colorTheme,
                 }}
               >
-                {t("projectPage.btnText")}
+                Close Window
               </Text>
             </Pressable>
           </View>
@@ -216,12 +213,12 @@ export default function Projects({ colorTheme, btnBackground, title }) {
 
       {toggleProject1 ? (
         moreProjectInfo(
-          t("projectPage.storageModal.title"),
+          "Storage Rental",
           "https://storage-rental.herokuapp.com/",
           "https://github.com/DutenLobarn/StorageRentalPage",
           image,
-          t("projectPage.storageModal.projectTools"),
-          t("projectPage.storageModal.projectDescription"),
+          "A webpage for my brother.",
+          "In this projekt my goal was to brush up on my React and Redux skills and also automatize email corresponding with potentional costumer.",
           setToggleProject1,
           toggleProject1
         )
@@ -231,12 +228,12 @@ export default function Projects({ colorTheme, btnBackground, title }) {
 
       {toggleProject2 ? (
         moreProjectInfo(
-          t("projectPage.landloardModal.title"),
+          "The Landloard",
           "https://mandus.herokuapp.com/",
           "https://github.com/DutenLobarn/App-for-a-landlord-company",
           image2,
-          t("projectPage.landloardModal.projectTools"),
-          t("projectPage.landloardModal.projectDescription"),
+          "Also a webpage for my brother.",
+          "In this projekt my goal was to brush up on my HTML and CSS skills and also play around with the CSS. Far from done!",
           setToggleProject2,
           toggleProject2
         )
@@ -246,12 +243,12 @@ export default function Projects({ colorTheme, btnBackground, title }) {
 
       {toggleProject3 ? (
         moreProjectInfo(
-          t("projectPage.webshopModal.title"),
+          "Node Teamwork.",
           "",
           "https://github.com/DutenLobarn/nackademin-slutprojekt-backend-Grupparbete-Domus",
           image3,
-          t("projectPage.webshopModal.projectTools"),
-          t("projectPage.webshopModal.projectDescription"),
+          "Also a webpage for my brother.33333",
+          "Me and another student got a finished FrontEnd (Vue) and worked with Node JS, Mongoose and MongoDB for the school exam. Very fun project and awesome collaboration!",
           setToggleProject3,
           toggleProject3
         )
@@ -261,12 +258,12 @@ export default function Projects({ colorTheme, btnBackground, title }) {
 
       {toggleProject4 ? (
         moreProjectInfo(
-          t("projectPage.bookLibraryModal.title"),
+          "React Teamwork",
           "",
           "https://github.com/DutenLobarn/Projekt-foretagssida",
           image4,
-          t("projectPage.bookLibraryModal.projectTools"),
-          t("projectPage.bookLibraryModal.projectDescription"),
+          "Also a webpage for my brother.4444",
+          "Me and 3 students got a Figma sketch that our final result should look like. First time using testing. Easy exercise i think.",
           setToggleProject4,
           toggleProject4
         )

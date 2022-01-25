@@ -16,6 +16,12 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import email from "react-native-email";
 
+import { useTranslation } from "react-i18next";
+
+export default function Contact({ colorTheme, title }) {
+
+const { t } = useTranslation();
+
 // here is validation Schema and what happens if validation is incorrect
 const reviewSchema = yup.object({
   FirstName: yup
@@ -179,6 +185,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                         >
                           {props.touched.LastName && props.errors.LastName}
                         </Text>
+
 
                         {/* here is a text field Email*/}
                         <TextInput

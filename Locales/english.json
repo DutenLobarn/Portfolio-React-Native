@@ -1,0 +1,51 @@
+{
+  "translation": {
+    "homePage": {
+      "name": "Mandus",
+      "frontEnd": "FrontEnd",
+      "webApp": "Web and App",
+      "development": "Development"
+    },
+    "projectPage": {
+      "title": "Projects",
+      "btnText": "Close Window",
+      "storageModal": {
+        "title": "Storage Rental",
+        "projectTools": "React, Redux och Sendgrid",
+        "projectDescription": "In this projekt my goal was to brush up on my React and Redux skills and also automatize email corresponding with potentional costumer."
+      },
+      "landloardModal": {
+        "title": "The Landloard",
+        "projectTools": "HTML och CSS",
+        "projectDescription": "In this projekt my goal was to brush up on my HTML and CSS skills and also play around with the CSS. Far from done!"
+      },
+      "webshopModal": {
+        "title": "Node Teamwork",
+        "projectTools": "Node JS, Mongoose och MongoDB (BackEnd)",
+        "projectDescription": "Me and another student got a finished FrontEnd (Vue) and worked with Node JS, Mongoose and MongoDB for the school exam. Very fun project and awesome collaboration!"
+      },
+      "bookLibraryModal": {
+        "title": "The Bookstore",
+        "projectTools": "React, Redux, Figma,",
+        "projectDescription": "This project did me and 4 other students during our Agile course. It was very fun to work in the Agile way, I got the chance to take on the role as scrum master which I thought was fun and a role that both me and my peers thought suited me. Extra fun that we delivered a result that we were proud of."
+      }
+    },
+    "skillsPage": {
+      "title": "Skills"
+    },
+    "aboutPage": {
+      "title": "About",
+      "textPart1": "Hello, I´m Mandus Lindström born year 1985 in Sweden.",
+      "textPart2": "I am a FrontEnd student and i am looking for work opportunities.",
+      "textPart3": "I have a big passion for coding and especially to get the coding result in a fast and understandable way, both for my peers and future Mandus Lindström. The most difficult coding problems i think is the most fun.",
+      "textPart4": "One day I will be happy to call myself a fullstack developer. Right now I am enjoying coding with JS and React very much, my BackEnd skills need improvments... With that said i do not have anything against learning new skills, but for now i am focused on deepening my skillset."
+    },
+    "contactPage": {
+      "title": "Contact",
+      "firstName": "Firstname",
+      "lastName": "Lastname",
+      "message": "Message",
+      "btnText": "Continue"
+    }
+  }
+}

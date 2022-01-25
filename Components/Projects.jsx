@@ -191,7 +191,7 @@ export default function Projects({ colorTheme, btnBackground, title }) {
     <LinearGradient
       colors={[mainLinearGradientColor, secondaryLinearGradientColor]}
     >
-      <ScrollView contentContainerStyle={{ paddingVertical: 128 }}>
+      <ScrollView contentContainerStyle={{ paddingTop: 128 }}>
         <Text
           style={{
             position: "absolute",

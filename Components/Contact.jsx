@@ -14,6 +14,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useFonts, Orbitron_500Medium } from "@expo-google-fonts/orbitron";
 import { Formik } from "formik";
 import * as yup from "yup";
+import email from "react-native-email";
 
 // here is validation Schema and what happens if validation is incorrect
 const reviewSchema = yup.object({
@@ -75,7 +76,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                   justifyContent: "center",
                   alignItems: "center",
                   marginTop: 20,
-                  borderRadius: "100%",
+                  borderRadius: 100,
                 }}
               >
                 <Image
@@ -100,6 +101,12 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                   /* here is went you press button SEND then save data */
                   onSubmit={(values, actions) => {
                     actions.resetForm();
+                    const to = "cuongtoq79@gmail.com";
+                    email(to, {
+                      cc: values.Email,
+                      subject: "kontakta Cuong",
+                      body: `${values.FirstName}  ${values.LastName} \n ${values.Message}`,
+                    }).catch(alert("This something wrong"));
                   }}
                 >
                   {(props) => (

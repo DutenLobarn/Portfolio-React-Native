@@ -108,15 +108,11 @@ export default function App() {
         <Tab.Screen
           name="Contact"
           children={() => (
-<<<<<<< HEAD
             <Contact
               colorTheme={colorTheme}
               title={"Kontakt"}
               btnBackground={navBackgroundColor}
             />
-=======
-            <Contact colorTheme={colorTheme} title={t("contactPage.title")} />
->>>>>>> parent of 382db26 (Merge branch 'main' into mandus)
           )}
           options={{
             tabBarIcon: ({ focused }) => (

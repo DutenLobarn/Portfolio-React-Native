@@ -120,7 +120,7 @@ export default function App() {
           children={() => (
             <Contact
               colorTheme={colorTheme}
-              title={"Kontakt"}
+              title={t("contactPage.title")}
               btnBackground={navBackgroundColor}
             />
           )}

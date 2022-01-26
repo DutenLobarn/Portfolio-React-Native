@@ -23,13 +23,16 @@ export default function Contact({ colorTheme, title, btnBackground }) {
   const { t } = useTranslation();
 
   const reviewSchema = yup.object({
-    FirstName: yup.string().required(t("contactPage.firstName_requred")).min(2),
+    FirstName: yup.string().required(t("contactPage.firstName_requred")),
 
-    LastName: yup.string().required(t("contactPage.lastName_requred")).min(2),
+    LastName: yup.string().required(t("contactPage.lastName_requred")),
 
-    Email: yup.string().email(t("contactPage.email_requred")).required().min(2),
+    Email: yup
+      .string()
+      .email(t("contactPage.email_requred"))
+      .required(t("contactPage.email_requred")),
 
-    Message: yup.string().required(t("contactPage.message_requred")).min(8),
+    Message: yup.string().required(t("contactPage.message_requred")),
   });
 
   let mainLinearGradientColor = "#000";

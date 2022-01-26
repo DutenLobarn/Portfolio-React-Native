@@ -49,10 +49,10 @@
       "email":"電子郵件",
       "message": "信息",
       "btnText": "繼續",
-      "firstName_requred":"您必須至少有 2 個字符",
-      "lastName_requred":"您必須至少有 2 個字符",
+      "firstName_requred":"您必须输入您的名字",
+      "lastName_requred":"您必须输入您的姓氏",
       "email_requred":"電子郵件是必需的",
-      "message_requred":"您必須至少有 8 個字符"
+      "message_requred":"缺少消息文本"
     }
   }
 }

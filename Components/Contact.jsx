@@ -8,6 +8,7 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
   ScrollView,
+  Pressable,
 } from "react-native";
 import AppLoading from "expo-app-loading";
 import { LinearGradient } from "expo-linear-gradient";
@@ -258,22 +259,26 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                           {props.touched.Message && props.errors.Message}
                         </Text>
                       </View>
-
-                      <View
+                      {/* here is the button for form  */}
+                      <Pressable
+                        onPress={props.handleSubmit}
                         style={{
-                          backgroundColor: btnBackground,
-                          marginTop: 10,
-                          width: 100,
+                          paddingVertical: 10,
+                          paddingHorizontal: 30,
                           alignSelf: "center",
-                          borderRadius: 50,
+                          backgroundColor: btnBackground,
+                          borderRadius: 100,
                         }}
                       >
-                        <Button
-                          title={t("contactPage.btnText")}
-                          color={colorTheme === "#000" ? "#000" : "#8F2F2F"}
-                          onPress={props.handleSubmit}
-                        />
-                      </View>
+                        <Text
+                          style={{
+                            fontSize: 20,
+                            color: colorTheme,
+                          }}
+                        >
+                          {t("contactPage.btnText")}
+                        </Text>
+                      </Pressable>
                     </View>
                   )}
                 </Formik>

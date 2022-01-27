@@ -10,6 +10,8 @@ import { useTranslation } from "react-i18next";
 import TypeWriter from "react-native-typewriter";
 
 export default function Home({ colorTheme }) {
+  const { t } = useTranslation();
+
   let [fontsLoaded] = useFonts({
     Orbitron_500Medium,
   });
@@ -36,7 +38,7 @@ export default function Home({ colorTheme }) {
               paddingBottom: 20,
             }}
           >
-            Mandus
+            {t("homePage.name")}
           </Text>
 
           <TypeWriter

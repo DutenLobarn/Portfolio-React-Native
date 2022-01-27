@@ -52,7 +52,12 @@
       "firstName": "1",
       "lastName": "2",
       "message": "3",
-      "btnText": "4"
+      "email": "44",
+      "btnText": "4",
+      "firstNameRequired": "Du måste skriva in ditt förnamn",
+      "lastNameRequired": "Du måste skriva in ditt efternamn",
+      "emailRequired": "E-post krävs",
+      "messageRequired": "Meddelande text saknas"
     }
   }
 }

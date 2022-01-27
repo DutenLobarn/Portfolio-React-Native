@@ -52,10 +52,10 @@
       "email": "電子郵件",
       "message": "信息",
       "btnText": "繼續",
-      "firstName_requred": "您必须输入您的名字",
-      "lastName_requred": "您必须输入您的姓氏",
-      "email_requred": "電子郵件是必需的",
-      "message_requred": "缺少消息文本"
+      "firstNameRequired": "您必须输入您的名字",
+      "lastNameRequired": "您必须输入您的姓氏",
+      "emailRequired": "電子郵件是必需的",
+      "messageRequired": "缺少消息文本"
     }
   }
 }

@@ -26,25 +26,21 @@ import email from "react-native-email";
 import { useTranslation } from "react-i18next";
 
 // here is validation Schema and what happens if validation is incorrect
-
 export default function Contact({ colorTheme, title, btnBackground }) {
   const { t } = useTranslation();
 
   const reviewSchema = yup.object({
-    FirstName: yup.string().required(t("contactPage.firstName_requred")),
+    FirstName: yup.string().required(t("contactPage.firstNameRequired")),
 
-    LastName: yup.string().required(t("contactPage.lastName_requred")),
+    LastName: yup.string().required(t("contactPage.lastNameRequired")),
 
     Email: yup
       .string()
-      .email(t("contactPage.email_requred"))
-      .required(t("contactPage.email_requred")),
+      .email(t("contactPage.emailRequired"))
+      .required(t("contactPage.emailRequired")),
 
-    Message: yup.string().required(t("contactPage.message_requred")),
+    Message: yup.string().required(t("contactPage.messageRequired")),
   });
-
-export default function Contact({ colorTheme, title, btnBackground }) {
-  const { t } = useTranslation();
 
   let mainLinearGradientColor = "#000";
   let secondaryLinearGradientColor = "grey";
@@ -52,7 +48,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
     mainLinearGradientColor = "#fff";
     secondaryLinearGradientColor = "grey";
   }
-  
+
   let [fontsLoaded] = useFonts({
     Orbitron_500Medium,
   });
@@ -61,21 +57,20 @@ export default function Contact({ colorTheme, title, btnBackground }) {
   } else {
     return (
       <LinearGradient
-      style={{ flex: 1 }}
-      colors={[mainLinearGradientColor, secondaryLinearGradientColor]}
+        style={{ flex: 1 }}
+        colors={[mainLinearGradientColor, secondaryLinearGradientColor]}
       >
-<ScrollView>
-<Text
+        <ScrollView>
+          <Text
             style={{
-              paddingTop:50,
-              fontSize:30,
-              colors:colorTheme,
-              fontWeight:"bold",
-              textAlign:"center",
-              fontFamily:"Orbitron_500Medium"
+              paddingTop: 50,
+              fontSize: 30,
+              color: colorTheme,
+              fontWeight: "bold",
+              textAlign: "center",
+              fontFamily: "Orbitron_500Medium",
             }}
-
->
+          >
             {title}
           </Text>
 
@@ -94,14 +89,14 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                   marginTop: 20,
                   borderRadius: 100,
                 }}
-                >
+              >
                 <Image
                   style={{
                     width: 100,
                     height: 100,
                   }}
                   source={require("../assets/src/mail.png")}
-                  />
+                />
               </View>
 
               {/* here is a view for form  */}
@@ -127,7 +122,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                       body: `${values.FirstName}  ${values.LastName} \n ${values.Message}`,
                     }).catch(alert("something has gone wrong"));
                   }}
-                  >
+                >
                   {(props) => (
                     <View>
                       <View>
@@ -136,8 +131,8 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                           placeholder={t("contactPage.firstName")}
                           placeholderTextColor={
                             colorTheme === "#000"
-                            ? "#rgba(0, 0 ,0, 0.5)"
-                            : "#8F2F2F"
+                              ? "#rgba(0, 0 ,0, 0.5)"
+                              : "#8F2F2F"
                           }
                           onBlur={props.handleBlur("FirstName")}
                           style={{
@@ -151,7 +146,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                           }}
                           onChangeText={props.handleChange("FirstName")}
                           value={props.values.FirstName}
-                          />
+                        />
                         {/* here is a text field Firstname required*/}
                         <Text
                           style={{
@@ -161,7 +156,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                             marginBottom: 10,
                             marginTop: 6,
                           }}
-                          >
+                        >
                           {props.touched.FirstName && props.errors.FirstName}
                         </Text>
 
@@ -172,20 +167,20 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                             colorTheme === "#000"
                               ? "#rgba(0, 0 ,0, 0.5)"
                               : "#8F2F2F"
-                            }
-                            onBlur={props.handleBlur("LastName")}
-                            style={{
-                              backgroundColor: "grey",
-                              padding: 10,
-                              width: "80%",
-                              alignSelf: "center",
-                              textAlign: "center",
-                              borderRadius: 10,
-                              marginTop: 10,
-                            }}
-                            onChangeText={props.handleChange("LastName")}
-                            value={props.values.LastName}
-                            />
+                          }
+                          onBlur={props.handleBlur("LastName")}
+                          style={{
+                            backgroundColor: "grey",
+                            padding: 10,
+                            width: "80%",
+                            alignSelf: "center",
+                            textAlign: "center",
+                            borderRadius: 10,
+                            marginTop: 10,
+                          }}
+                          onChangeText={props.handleChange("LastName")}
+                          value={props.values.LastName}
+                        />
                         {/* here is a text field Lastname required*/}
                         <Text
                           style={{
@@ -195,7 +190,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                             marginBottom: 10,
                             marginTop: 6,
                           }}
-                          >
+                        >
                           {props.touched.LastName && props.errors.LastName}
                         </Text>
 
@@ -206,20 +201,20 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                             colorTheme === "#000"
                               ? "#rgba(0, 0 ,0, 0.5)"
                               : "#8F2F2F"
-                            }
-                            onBlur={props.handleBlur("Email")}
-                            style={{
-                              backgroundColor: "grey",
-                              padding: 10,
-                              width: "80%",
-                              alignSelf: "center",
-                              textAlign: "center",
-                              borderRadius: 10,
-                              marginTop: 10,
-                            }}
-                            onChangeText={props.handleChange("Email")}
-                            value={props.values.Email}
-                            />
+                          }
+                          onBlur={props.handleBlur("Email")}
+                          style={{
+                            backgroundColor: "grey",
+                            padding: 10,
+                            width: "80%",
+                            alignSelf: "center",
+                            textAlign: "center",
+                            borderRadius: 10,
+                            marginTop: 10,
+                          }}
+                          onChangeText={props.handleChange("Email")}
+                          value={props.values.Email}
+                        />
                         {/* here is a text field Email required*/}
                         <Text
                           style={{
@@ -229,7 +224,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                             marginBottom: 10,
                             marginTop: 6,
                           }}
-                          >
+                        >
                           {props.touched.Email && props.errors.Email}
                         </Text>
 
@@ -240,8 +235,8 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                           placeholder={t("contactPage.message")}
                           placeholderTextColor={
                             colorTheme === "#000"
-                            ? "#rgba(0, 0 ,0, 0.5)"
-                            : "#8F2F2F"
+                              ? "#rgba(0, 0 ,0, 0.5)"
+                              : "#8F2F2F"
                           }
                           onBlur={props.handleBlur("Message")}
                           style={{
@@ -257,7 +252,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                           }}
                           onChangeText={props.handleChange("Message")}
                           value={props.values.Message}
-                          />
+                        />
                         {/* here is a text field Message required*/}
                         <Text
                           style={{
@@ -267,7 +262,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                             marginBottom: 10,
                             marginTop: 6,
                           }}
-                          >
+                        >
                           {props.touched.Message && props.errors.Message}
                         </Text>
                       </View>
@@ -301,4 +296,4 @@ export default function Contact({ colorTheme, title, btnBackground }) {
       </LinearGradient>
     );
   }
-}}
+}

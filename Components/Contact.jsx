@@ -1,21 +1,24 @@
 import React from "react";
+
 import {
   Text,
   View,
   Image,
-  Button,
   TextInput,
   TouchableWithoutFeedback,
   Keyboard,
   ScrollView,
+  Pressable,
 } from "react-native";
 
 import AppLoading from "expo-app-loading";
 
 import { LinearGradient } from "expo-linear-gradient";
+
 import { useFonts, Orbitron_500Medium } from "@expo-google-fonts/orbitron";
 
 import { Formik } from "formik";
+
 import * as yup from "yup";
 
 import email from "react-native-email";
@@ -23,18 +26,22 @@ import email from "react-native-email";
 import { useTranslation } from "react-i18next";
 
 // here is validation Schema and what happens if validation is incorrect
-const reviewSchema = yup.object({
-  FirstName: yup
-    .string()
-    .required("you must have at least 2 characters")
-    .min(2),
 
-  LastName: yup.string().required("you must have at least 2 characters").min(2),
+export default function Contact({ colorTheme, title, btnBackground }) {
+  const { t } = useTranslation();
 
-  Email: yup.string().email("Email is required").required().min(2),
+  const reviewSchema = yup.object({
+    FirstName: yup.string().required(t("contactPage.firstName_requred")),
 
-  Message: yup.string().required("you must have at least 8 characters").min(8),
-});
+    LastName: yup.string().required(t("contactPage.lastName_requred")),
+
+    Email: yup
+      .string()
+      .email(t("contactPage.email_requred"))
+      .required(t("contactPage.email_requred")),
+
+    Message: yup.string().required(t("contactPage.message_requred")),
+  });
 
 export default function Contact({ colorTheme, title, btnBackground }) {
   const { t } = useTranslation();
@@ -95,6 +102,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                   source={require("../assets/src/mail.png")}
                 />
               </View>
+
               {/* here is a view for form  */}
               <View>
                 <Formik
@@ -109,12 +117,14 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                   /* here is went you press button SEND then save data */
                   onSubmit={(values, actions) => {
                     actions.resetForm();
+
                     const to = "cuongtoq79@gmail.com";
+                    alert("Mail is Sent");
                     email(to, {
                       cc: values.Email,
                       subject: "kontakta Cuong",
                       body: `${values.FirstName}  ${values.LastName} \n ${values.Message}`,
-                    }).catch(alert("This something wrong"));
+                    }).catch(alert("something has gone wrong"));
                   }}
                 >
                   {(props) => (
@@ -190,7 +200,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
 
                         {/* here is a text field Email*/}
                         <TextInput
-                          placeholder="Email"
+                          placeholder={t("contactPage.email")}
                           placeholderTextColor={
                             colorTheme === "#000"
                               ? "#rgba(0, 0 ,0, 0.5)"
@@ -260,22 +270,26 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                           {props.touched.Message && props.errors.Message}
                         </Text>
                       </View>
-
-                      <View
+                      {/* here is the button for form  */}
+                      <Pressable
+                        onPress={props.handleSubmit}
                         style={{
-                          backgroundColor: btnBackground,
-                          marginTop: 10,
-                          width: 100,
+                          paddingVertical: 10,
+                          paddingHorizontal: 30,
                           alignSelf: "center",
-                          borderRadius: 50,
+                          backgroundColor: btnBackground,
+                          borderRadius: 100,
                         }}
                       >
-                        <Button
-                          title={t("contactPage.btnText")}
-                          color={colorTheme === "#000" ? "#000" : "#8F2F2F"}
-                          onPress={props.handleSubmit}
-                        />
-                      </View>
+                        <Text
+                          style={{
+                            fontSize: 20,
+                            color: colorTheme,
+                          }}
+                        >
+                          {t("contactPage.btnText")}
+                        </Text>
+                      </Pressable>
                     </View>
                   )}
                 </Formik>
@@ -286,4 +300,4 @@ export default function Contact({ colorTheme, title, btnBackground }) {
       </LinearGradient>
     );
   }
-}
+}}

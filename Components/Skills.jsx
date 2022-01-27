@@ -1,9 +1,11 @@
 import React from "react";
+
 import { Text, View, Image, ScrollView } from "react-native";
 
 import AppLoading from "expo-app-loading";
 
 import { useFonts, Orbitron_500Medium } from "@expo-google-fonts/orbitron";
+
 import { FontAwesome } from "@expo/vector-icons";
 
 import { LinearGradient } from "expo-linear-gradient";
@@ -128,6 +130,7 @@ export default function Skills({ colorTheme, title }) {
         style={{ flex: 1 }}
         colors={[mainLinearGradientColor, secondaryLinearGradientColor]}
       >
+        {/* here is the -knowledge- title */}
         <ScrollView style={{ flex: 1 }}>
           <Text
             style={{
@@ -141,7 +144,7 @@ export default function Skills({ colorTheme, title }) {
           >
             {title}
           </Text>
-
+          {/* here begin the whole wrap for knowledge explanation */}
           <View
             style={{
               height: 100,
@@ -152,6 +155,7 @@ export default function Skills({ colorTheme, title }) {
               paddingTop: 50,
             }}
           >
+            {/* here begin the whole wrap for student */}
             <View style={{ flex: 1 }}>
               {levelSkills("Student")}
 
@@ -166,6 +170,7 @@ export default function Skills({ colorTheme, title }) {
               </View>
             </View>
 
+            {/* here begin the whole wrap for Entry */}
             <View style={{ flex: 1 }}>
               {levelSkills("Entry")}
               <View
@@ -180,6 +185,7 @@ export default function Skills({ colorTheme, title }) {
               </View>
             </View>
 
+            {/* here begin the whole wrap for Junior */}
             <View style={{ flex: 1 }}>
               {levelSkills("Junior")}
 
@@ -196,6 +202,7 @@ export default function Skills({ colorTheme, title }) {
               </View>
             </View>
 
+            {/* here begin the whole wrap for Senior */}
             <View style={{ flex: 1 }}>
               {levelSkills("Senior")}
               <View
@@ -212,6 +219,7 @@ export default function Skills({ colorTheme, title }) {
               </View>
             </View>
 
+            {/* here begin the whole wrap for Master*/}
             <View style={{ flex: 1 }}>
               {levelSkills("Master")}
               <View
@@ -230,6 +238,7 @@ export default function Skills({ colorTheme, title }) {
             </View>
           </View>
 
+          {/* here begin the whole wrap for UX */}
           {skillsHeadLine(t("skillsPage.ux"))}
 
           <View
@@ -251,6 +260,7 @@ export default function Skills({ colorTheme, title }) {
             )}
           </View>
 
+          {/* here begin the whole wrap for Frontend */}
           {skillsHeadLine(t("skillsPage.frontend"))}
 
           <View
@@ -328,6 +338,7 @@ export default function Skills({ colorTheme, title }) {
             )}
           </View>
 
+          {/* here begin the whole wrap for APP */}
           {skillsHeadLine(t("skillsPage.app"))}
 
           <View
@@ -349,6 +360,7 @@ export default function Skills({ colorTheme, title }) {
             )}
           </View>
 
+          {/* here begin the whole wrap for backend */}
           {skillsHeadLine(t("skillsPage.backend"))}
 
           <View
@@ -388,6 +400,7 @@ export default function Skills({ colorTheme, title }) {
             )}
           </View>
 
+          {/* here begin the whole wrap for Database */}
           {skillsHeadLine(t("skillsPage.database"))}
 
           <View

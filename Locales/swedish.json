@@ -51,8 +51,13 @@
       "title": "Kontakt",
       "firstName": "Förnamn",
       "lastName": "Efternamn",
+      "email":"E-post",
       "message": "Meddelande",
-      "btnText": "Fortsätt"
+      "btnText": "Fortsätt",
+      "firstName_requred":"Du måste skriva in ditt förnamn",
+      "lastName_requred":"Du måste skriva in ditt efternamn",
+      "email_requred":"E-post krävs",
+      "message_requred":"Meddelande text saknas"
     }
   }
 }

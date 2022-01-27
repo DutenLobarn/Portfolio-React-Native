@@ -2,57 +2,60 @@
   "translation": {
     "homePage": {
       "name": "Mandus",
-      "frontEnd": "FrontEnd",
-      "webApp": "Web 和 App",
-      "development": "发展"
+      "frontEnd": "前端工程",
+      "webApp": "網絡 應用程序",
+      "development": "開發程人"
     },
     "projectPage": {
-      "title": "项目",
-      "btnText": "1",
-      "alertWebPage": "Detta projekt har ingen live sida att visa upp.",
-      "alertProject": "Detta projekt har inget repo-sida att visa upp.",
+      "title": "項目",
+      "btnText": "關閉",
       "storageModal": {
-        "title": "2",
+        "title": "儲藏室出租",
         "projectTools": "React, Redux och Sendgrid",
-        "projectDescription": "3"
+        "projectDescription": "在這個項目中, 我的目標是繼續前進並發展我的 React 和 Redux 技能，同時學習能夠自動接收來自用戶的電子郵件."
       },
       "landloardModal": {
-        "title": "4",
-        "projectTools": "HTML 5 CSS",
-        "projectDescription": "6"
+        "title": "房東",
+        "projectTools": "HTML och CSS",
+        "projectDescription": "在這個項目中，我的目標是繼續前進並發展我的 HTML 和 CSS 技能，同時也嘗試使用 CSS。這一頁遠未完成！"
       },
       "webshopModal": {
-        "title": "Node 7",
-        "projectTools": "Node JS, Mongoose 8 MongoDB (BackEnd)",
-        "projectDescription": "9"
+        "title": "Node 團隊合作 ",
+        "projectTools": "Node JS, Mongoose och MongoDB (後端工程)",
+        "projectDescription": "我和另一個同學從老師那裡得到了一個用 VUE 編寫的完成的 前端工程 ，然後我們在這個學校項目中使用了 Node JS、Mongoose 和 MongoDB。這是一個非常有趣的項目，和我的同學一起工作非常有趣。"
       },
       "bookLibraryModal": {
-        "title": "1",
+        "title": "書店",
         "projectTools": "React, Redux, Figma,",
-        "projectDescription": "2"
+        "projectDescription": "這個項目是由我和我的 4 位同學在我們的敏捷課程中完成的。以敏捷的工作方式工作非常有趣，我有機會擔任 Scrum Master，我認為這既有趣又是我和我的同學都認為適合我的角色。額外的樂趣也讓我們得到了滿意的結果。"
       }
     },
     "skillsPage": {
-      "title": "技能",
-      "ux": "UX",
-      "frontend": "FrontEnd",
-      "app": "APP",
-      "backend": "BackEnd",
-      "database": "Database"
+      "title": "知識",
+      "ux": "使用者經驗設計",
+      "frontend": "前端工程",
+      "app": "應用程序",
+      "backend": "後端工程",
+      "database": "數據庫"
     },
     "aboutPage": {
-      "title": "关于",
-      "textPart1": "del1",
-      "textPart2": "del2",
-      "textPart3": "del3",
-      "textPart4": "del4"
+      "title": "關於我",
+      "textPart1": "嗨，我的名字是 Mandus Lindström。 1985年出生於瑞典",
+      "textPart2": "我是一名前端工程學生，正在尋找工作機會",
+      "textPart3": "我什至對編碼充滿熱情，尤其是我能快速獲得代碼結果，而且對於我的同事和未來的 Mandus Lindström 來說，它應該很容易理解。我認為最困難的編碼挑戰是最有趣的。",
+      "textPart4": "有一天，我希望能夠稱自己為全栈工程师。現在我喜歡使用 JS 和 React，我的後端技工程能需要開發......話雖如此，我不介意學習新的語言/知識，但目前我專注於深化我已經開始的語言。"
     },
     "contactPage": {
-      "title": "接触",
-      "firstName": "1",
-      "lastName": "2",
-      "message": "3",
-      "btnText": "4"
+      "title": "接觸",
+      "firstName": "名",
+      "lastName": "姓",
+      "email": "電子郵件",
+      "message": "信息",
+      "btnText": "繼續",
+      "firstName_requred": "您必须输入您的名字",
+      "lastName_requred": "您必须输入您的姓氏",
+      "email_requred": "電子郵件是必需的",
+      "message_requred": "缺少消息文本"
     }
   }
 }

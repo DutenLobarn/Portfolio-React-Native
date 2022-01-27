@@ -11,8 +11,6 @@ import AppLoading from "expo-app-loading";
 
 import { useFonts, Orbitron_500Medium } from "@expo-google-fonts/orbitron";
 
-import AnimatedTypeWriter from "react-native-animated-typewriter";
-
 export default function About({ colorTheme, title }) {
   const { t } = useTranslation();
 
@@ -46,6 +44,7 @@ export default function About({ colorTheme, title }) {
   } else {
     return (
       <LinearGradient
+        style={{ height: "100%" }}
         colors={[mainLinearGradientColor, secondaryLinearGradientColor]}
       >
         <ScrollView>

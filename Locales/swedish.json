@@ -54,10 +54,10 @@
       "email":"E-post",
       "message": "Meddelande",
       "btnText": "Fortsätt",
-      "firstName_requred":"Du måste skriva in ditt förnamn",
-      "lastName_requred":"Du måste skriva in ditt efternamn",
-      "email_requred":"E-post krävs",
-      "message_requred":"Meddelande text saknas"
+      "firstNameRequired":"Du måste skriva in ditt förnamn",
+      "lastNameRequired":"Du måste skriva in ditt efternamn",
+      "emailRequired":"E-post krävs",
+      "messageRequired":"Meddelande text saknas"
     }
   }
 }

@@ -52,7 +52,10 @@
       "firstName": "1",
       "lastName": "2",
       "message": "3",
-      "btnText": "4"
+      "btnText": "4",
+      "firstNameRequired": "You need to fill in your firstname",
+      "lastNameRequired": "You need to fill in your lastname","emailRequired": "Email is missing",
+      "messageRequired": "Message text is missing"
     }
   }
 }

@@ -31,20 +31,17 @@ export default function Contact({ colorTheme, title, btnBackground }) {
   const { t } = useTranslation();
 
   const reviewSchema = yup.object({
-    FirstName: yup.string().required(t("contactPage.firstName_requred")),
+    FirstName: yup.string().required(t("contactPage.firstNameRequired")),
 
-    LastName: yup.string().required(t("contactPage.lastName_requred")),
+    LastName: yup.string().required(t("contactPage.lastNameRequired")),
 
     Email: yup
       .string()
-      .email(t("contactPage.email_requred"))
-      .required(t("contactPage.email_requred")),
+      .email(t("contactPage.emailRequired"))
+      .required(t("contactPage.emailRequired")),
 
-    Message: yup.string().required(t("contactPage.message_requred")),
+    Message: yup.string().required(t("contactPage.messageRequired")),
   });
-
-export default function Contact({ colorTheme, title, btnBackground }) {
-  const { t } = useTranslation();
 
   let mainLinearGradientColor = "#000";
   let secondaryLinearGradientColor = "grey";
@@ -300,4 +297,4 @@ export default function Contact({ colorTheme, title, btnBackground }) {
       </LinearGradient>
     );
   }
-}}
+}

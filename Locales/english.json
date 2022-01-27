@@ -9,6 +9,8 @@
     "projectPage": {
       "title": "Projects",
       "btnText": "Close Window",
+      "alertWebPage": "This projects does not have a live page to display.",
+      "alertProject": "This projects does not have a repository page to display.",
       "storageModal": {
         "title": "Storage Rental",
         "projectTools": "React, Redux och Sendgrid",
@@ -31,7 +33,12 @@
       }
     },
     "skillsPage": {
-      "title": "Skills"
+      "title": "Skills",
+      "ux": "UX",
+      "frontend": "FrontEnd",
+      "app": "APP",
+      "backend": "BackEnd",
+      "database": "Database"
     },
     "aboutPage": {
       "title": "About",

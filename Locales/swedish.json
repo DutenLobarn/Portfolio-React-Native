@@ -9,6 +9,8 @@
     "projectPage": {
       "title": "Projekt",
       "btnText": "Stäng Fönstret",
+      "alertWebPage": "Detta projekt har ingen live sida att visa upp.",
+      "alertProject": "Detta projekt har inget repo-sida att visa upp.",
       "storageModal": {
         "title": "Förrådsuthyrning",
         "projectTools": "React, Redux och Sendgrid",
@@ -31,11 +33,16 @@
       }
     },
     "skillsPage": {
-      "title": "Kunskaper"
+      "title": "Kunskaper",
+      "ux": "UX",
+      "frontend": "FrontEnd",
+      "app": "APP",
+      "backend": "BackEnd",
+      "database": "Databas"
     },
     "aboutPage": {
       "title": "Om",
-      "textPart1": "Hej, mitt namn är Mandus Lindström. Född 1985 i Sverige",
+      "textPart1": "Hej, mitt namn är Mandus Lindström. Född 1985 i Sverige.",
       "textPart2": "Jag är en FrontEnd student och letar efter jobbmöjligheter.",
       "textPart3": "Jag har ens stor passion för kodning och speciellt att jag får ett kodresultat snabbt och att det ska vara lätt att förstå, både för mina kollegor och för framtida Mandus Lindström. De mest svåra kodnings utmaningarna tycker jag är de roligaste.",
       "textPart4": "En dag hoppas jag ska kunna kalla migs jälv fullstack utvecklare. Just nu trivs jag väldigt bra med att jobba med JS och React, mina BackEnd kunskaper behöver utvecklas... Med det sagt har jag ingenting emot att lära mig nya språk/kunskaper men för tillfället är jag fokuserad att fördjupa mina redan påbörjade språk."

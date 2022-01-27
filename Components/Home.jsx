@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-
+import React from "react";
 import { Text, View, ImageBackground } from "react-native";
+
 import AppLoading from "expo-app-loading";
+
 import { useFonts, Orbitron_500Medium } from "@expo-google-fonts/orbitron";
+
 import { useTranslation } from "react-i18next";
 
 export default function Home({ colorTheme }) {

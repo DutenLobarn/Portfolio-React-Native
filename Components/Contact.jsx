@@ -9,12 +9,18 @@ import {
   Keyboard,
   ScrollView,
 } from "react-native";
+
 import AppLoading from "expo-app-loading";
+
 import { LinearGradient } from "expo-linear-gradient";
 import { useFonts, Orbitron_500Medium } from "@expo-google-fonts/orbitron";
+
 import { Formik } from "formik";
 import * as yup from "yup";
+
 import email from "react-native-email";
+
+import { useTranslation } from "react-i18next";
 
 // here is validation Schema and what happens if validation is incorrect
 const reviewSchema = yup.object({
@@ -31,6 +37,8 @@ const reviewSchema = yup.object({
 });
 
 export default function Contact({ colorTheme, title, btnBackground }) {
+  const { t } = useTranslation();
+
   let mainLinearGradientColor = "#000";
   let secondaryLinearGradientColor = "grey";
   if (colorTheme === "#000") {
@@ -114,7 +122,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                       <View>
                         {/* here is a text field Firstname*/}
                         <TextInput
-                          placeholder="Firstname"
+                          placeholder={t("contactPage.firstName")}
                           placeholderTextColor={
                             colorTheme === "#000"
                               ? "#rgba(0, 0 ,0, 0.5)"
@@ -148,7 +156,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
 
                         {/* here is a text field Lastname*/}
                         <TextInput
-                          placeholder="Lastname"
+                          placeholder={t("contactPage.lastName")}
                           placeholderTextColor={
                             colorTheme === "#000"
                               ? "#rgba(0, 0 ,0, 0.5)"
@@ -218,7 +226,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                         <TextInput
                           multiline={true}
                           textAlignVertical="top"
-                          placeholder="Message"
+                          placeholder={t("contactPage.message")}
                           placeholderTextColor={
                             colorTheme === "#000"
                               ? "#rgba(0, 0 ,0, 0.5)"
@@ -263,7 +271,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                         }}
                       >
                         <Button
-                          title="SEND"
+                          title={t("contactPage.btnText")}
                           color={colorTheme === "#000" ? "#000" : "#8F2F2F"}
                           onPress={props.handleSubmit}
                         />

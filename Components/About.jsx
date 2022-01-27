@@ -2,7 +2,6 @@ import React from "react";
 import { Text, View, Linking } from "react-native";
 
 import { LinearGradient } from "expo-linear-gradient";
-
 import { AntDesign } from "@expo/vector-icons";
 
 import { useTranslation } from "react-i18next";

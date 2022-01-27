@@ -7,10 +7,38 @@
       "development": "发展"
     },
     "projectPage": {
-      "title": "项目"
+      "title": "项目",
+      "btnText": "1",
+      "alertWebPage": "Detta projekt har ingen live sida att visa upp.",
+      "alertProject": "Detta projekt har inget repo-sida att visa upp.",
+      "storageModal": {
+        "title": "2",
+        "projectTools": "React, Redux och Sendgrid",
+        "projectDescription": "3"
+      },
+      "landloardModal": {
+        "title": "4",
+        "projectTools": "HTML 5 CSS",
+        "projectDescription": "6"
+      },
+      "webshopModal": {
+        "title": "Node 7",
+        "projectTools": "Node JS, Mongoose 8 MongoDB (BackEnd)",
+        "projectDescription": "9"
+      },
+      "bookLibraryModal": {
+        "title": "1",
+        "projectTools": "React, Redux, Figma,",
+        "projectDescription": "2"
+      }
     },
     "skillsPage": {
-      "title": "技能"
+      "title": "技能",
+      "ux": "UX",
+      "frontend": "FrontEnd",
+      "app": "APP",
+      "backend": "BackEnd",
+      "database": "Database"
     },
     "aboutPage": {
       "title": "关于",
@@ -20,7 +48,11 @@
       "textPart4": "del4"
     },
     "contactPage": {
-      "title": "接触"
+      "title": "接触",
+      "firstName": "1",
+      "lastName": "2",
+      "message": "3",
+      "btnText": "4"
     }
   }
 }

@@ -18,6 +18,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Projects({ colorTheme, btnBackground, title }) {
   const { t } = useTranslation();
+
   const [toggleProject1, setToggleProject1] = useState(false);
   const [toggleProject2, setToggleProject2] = useState(false);
   const [toggleProject3, setToggleProject3] = useState(false);
@@ -111,9 +112,7 @@ export default function Projects({ colorTheme, btnBackground, title }) {
                 if (url) {
                   Linking.openURL(url);
                 } else {
-                  Alert.alert(
-                    "Detta projekt har ingen live sida att visa upp."
-                  );
+                  Alert.alert(t("projectPage.alertWebPage"));
                 }
               }}
             >
@@ -153,7 +152,7 @@ export default function Projects({ colorTheme, btnBackground, title }) {
                 if (gitHubUrl) {
                   Linking.openURL(gitHubUrl);
                 } else {
-                  Alert.alert("Detta projekt har inget repo att visa upp.");
+                  Alert.alert(t("projectPage.alertProject"));
                 }
               }}
               style={{
@@ -166,13 +165,12 @@ export default function Projects({ colorTheme, btnBackground, title }) {
             />
             <Pressable
               onPress={() => toggleProject(!bolean)}
-              title="Close Window"
               style={{
                 paddingVertical: 10,
                 paddingHorizontal: 30,
                 alignSelf: "center",
                 backgroundColor: btnBackground,
-                borderRadius: 5,
+                borderRadius: 100,
               }}
             >
               <Text

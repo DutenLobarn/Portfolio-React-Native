@@ -7,10 +7,38 @@
       "development": "Zhvillimin"
     },
     "projectPage": {
-      "title": "Projekt"
+      "title": "Projekt",
+      "btnText": "1",
+      "alertWebPage": "123",
+      "alertProject": "1234",
+      "storageModal": {
+        "title": "1",
+        "projectTools": "React, Redux 2 Sendgrid",
+        "projectDescription": "3"
+      },
+      "landloardModal": {
+        "title": "1",
+        "projectTools": "HTML och CSS",
+        "projectDescription": "2"
+      },
+      "webshopModal": {
+        "title": "Node 1",
+        "projectTools": "Node JS, Mongoose 2 MongoDB (BackEnd)",
+        "projectDescription": "3"
+      },
+      "bookLibraryModal": {
+        "title": "1",
+        "projectTools": "React, Redux, Figma,",
+        "projectDescription": "2"
+      }
     },
     "skillsPage": {
-      "title": "Aftësitë"
+      "title": "Aftësitë",
+      "ux": "UX",
+      "frontend": "FrontEnd",
+      "app": "APP",
+      "backend": "BackEnd",
+      "database": "1"
     },
     "aboutPage": {
       "title": "Rreth",
@@ -20,7 +48,11 @@
       "textPart4": "del4"
     },
     "contactPage": {
-      "title": "Kontaktoni"
+      "title": "Kontaktoni",
+      "firstName": "1",
+      "lastName": "2",
+      "message": "3",
+      "btnText": "4"
     }
   }
 }

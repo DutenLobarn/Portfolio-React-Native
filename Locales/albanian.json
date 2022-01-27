@@ -1,0 +1,58 @@
+{
+  "translation": {
+    "homePage": {
+      "name": "Mandus",
+      "frontEnd": "FrontEnd",
+      "webApp": "Web edhe App",
+      "development": "Zhvillimin"
+    },
+    "projectPage": {
+      "title": "Projekt",
+      "btnText": "1",
+      "alertWebPage": "123",
+      "alertProject": "1234",
+      "storageModal": {
+        "title": "1",
+        "projectTools": "React, Redux 2 Sendgrid",
+        "projectDescription": "3"
+      },
+      "landloardModal": {
+        "title": "1",
+        "projectTools": "HTML och CSS",
+        "projectDescription": "2"
+      },
+      "webshopModal": {
+        "title": "Node 1",
+        "projectTools": "Node JS, Mongoose 2 MongoDB (BackEnd)",
+        "projectDescription": "3"
+      },
+      "bookLibraryModal": {
+        "title": "1",
+        "projectTools": "React, Redux, Figma,",
+        "projectDescription": "2"
+      }
+    },
+    "skillsPage": {
+      "title": "Aftësitë",
+      "ux": "UX",
+      "frontend": "FrontEnd",
+      "app": "APP",
+      "backend": "BackEnd",
+      "database": "1"
+    },
+    "aboutPage": {
+      "title": "Rreth",
+      "textPart1": "del1",
+      "textPart2": "del2",
+      "textPart3": "del3",
+      "textPart4": "del4"
+    },
+    "contactPage": {
+      "title": "Kontaktoni",
+      "firstName": "1",
+      "lastName": "2",
+      "message": "3",
+      "btnText": "4"
+    }
+  }
+}

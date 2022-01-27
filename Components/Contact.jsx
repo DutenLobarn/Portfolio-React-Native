@@ -1,21 +1,28 @@
 import React from "react";
+
 import {
   Text,
   View,
   Image,
-  Button,
   TextInput,
   TouchableWithoutFeedback,
   Keyboard,
   ScrollView,
   Pressable,
 } from "react-native";
+
 import AppLoading from "expo-app-loading";
+
 import { LinearGradient } from "expo-linear-gradient";
+
 import { useFonts, Orbitron_500Medium } from "@expo-google-fonts/orbitron";
+
 import { Formik } from "formik";
+
 import * as yup from "yup";
+
 import email from "react-native-email";
+
 import { useTranslation } from "react-i18next";
 
 // here is validation Schema and what happens if validation is incorrect
@@ -92,6 +99,7 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                   source={require("../assets/src/mail.png")}
                 />
               </View>
+
               {/* here is a view for form  */}
               <View>
                 <Formik

@@ -32,7 +32,12 @@
 
     },
     "skillsPage": {
-      "title": "知識"
+      "title": "知識",
+      "ux": "使用者經驗設計",
+      "frontend": "前端工程",
+      "app": "應用程序",
+      "backend": "後端工程",
+      "database": "數據庫"
 
     },
     "aboutPage": {

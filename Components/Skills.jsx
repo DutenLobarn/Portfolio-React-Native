@@ -1,11 +1,20 @@
 import React from "react";
+
 import { Text, View, Image, ScrollView } from "react-native";
+
 import AppLoading from "expo-app-loading";
+
 import { useFonts, Orbitron_500Medium } from "@expo-google-fonts/orbitron";
+
 import { FontAwesome } from "@expo/vector-icons";
+
 import { LinearGradient } from "expo-linear-gradient";
 
+import { useTranslation } from "react-i18next";
+
 export default function Skills({ colorTheme, title }) {
+  const { t } = useTranslation();
+
   // here I made a function so you can cut down code
 
   const element = (
@@ -231,7 +240,7 @@ export default function Skills({ colorTheme, title }) {
           </View>
 
           {/* here begin the whole wrap for UX */}
-          {skillsHeadLine("UX")}
+          {skillsHeadLine(t("skillsPage.ux"))}
 
           <View
             style={{
@@ -253,7 +262,7 @@ export default function Skills({ colorTheme, title }) {
           </View>
 
           {/* here begin the whole wrap for Frontend */}
-          {skillsHeadLine("FrontEnd")}
+          {skillsHeadLine(t("skillsPage.frontend"))}
 
           <View
             style={{
@@ -331,7 +340,7 @@ export default function Skills({ colorTheme, title }) {
           </View>
 
           {/* here begin the whole wrap for APP */}
-          {skillsHeadLine("APP")}
+          {skillsHeadLine(t("skillsPage.app"))}
 
           <View
             style={{
@@ -353,7 +362,7 @@ export default function Skills({ colorTheme, title }) {
           </View>
 
           {/* here begin the whole wrap for backend */}
-          {skillsHeadLine("BackEnd")}
+          {skillsHeadLine(t("skillsPage.backend"))}
 
           <View
             style={{
@@ -393,7 +402,7 @@ export default function Skills({ colorTheme, title }) {
           </View>
 
           {/* here begin the whole wrap for Database */}
-          {skillsHeadLine("Database")}
+          {skillsHeadLine(t("skillsPage.database"))}
 
           <View
             style={{

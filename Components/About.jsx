@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Text, View, Linking, ScrollView } from "react-native";
 
 import { LinearGradient } from "expo-linear-gradient";
@@ -10,6 +11,8 @@ import { useTranslation } from "react-i18next";
 import AppLoading from "expo-app-loading";
 
 import { useFonts, Orbitron_500Medium } from "@expo-google-fonts/orbitron";
+
+import AnimatedTypeWriter from "react-native-animated-typewriter";
 
 export default function About({ colorTheme, title }) {
   const { t } = useTranslation();

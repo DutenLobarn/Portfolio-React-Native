@@ -10,7 +10,12 @@
       "title": "Projekt"
     },
     "skillsPage": {
-      "title": "Aftësitë"
+      "title": "Aftësitë",
+      "ux": "UX",
+      "frontend": "FrontEnd",
+      "app": "APP",
+      "backend": "BackEnd",
+      "database": "Databas"
     },
     "aboutPage": {
       "title": "Rreth",

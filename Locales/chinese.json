@@ -9,6 +9,8 @@
     "projectPage": {
       "title": "項目",
       "btnText": "關閉",
+      "alertWebPage": "This projects does not have a live page to display.",
+      "alertProject": "This projects does not have a repository page to display.",
       "storageModal": {
         "title": "儲藏室出租",
         "projectTools": "React, Redux och Sendgrid",

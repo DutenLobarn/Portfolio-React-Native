@@ -116,12 +116,28 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                     actions.resetForm();
 
                     const to = "cuongtoq79@gmail.com";
-                    alert("Mail is Sent");
+                    {
+                      to === "cuongtoq79@gmail.com" ? (
+                        <Image
+                          source={{
+                            uri: "https://tenor.com/view/mail-download-open-sending-send-gif-12348461",
+                          }}
+                          style={{ width: 100, height: 100 }}
+                        />
+                      ) : (
+                        alert("something has gone wrong")
+                      );
+                    }
                     email(to, {
                       cc: values.Email,
                       subject: "kontakta Cuong",
-                      body: `${values.FirstName}  ${values.LastName} \n ${values.Message}`,
-                    }).catch(alert("something has gone wrong"));
+                      body:
+                        values.FirstName +
+                        " " +
+                        values.LastName +
+                        "\n" +
+                        values.Message,
+                    }).catch(console.error);
                   }}
                 >
                   {(props) => (

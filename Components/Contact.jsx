@@ -117,16 +117,9 @@ export default function Contact({ colorTheme, title, btnBackground }) {
 
                     const to = "cuongtoq79@gmail.com";
                     {
-                      to === "cuongtoq79@gmail.com" ? (
-                        <Image
-                          source={{
-                            uri: "https://tenor.com/view/mail-download-open-sending-send-gif-12348461",
-                          }}
-                          style={{ width: 100, height: 100 }}
-                        />
-                      ) : (
-                        alert("something has gone wrong")
-                      );
+                      to === "cuongtoq79@gmail.com"
+                        ? alert(t("contactPage.alertSent"))
+                        : alert(t("contactPage.alertNotSent"));
                     }
                     email(to, {
                       cc: values.Email,

@@ -57,7 +57,9 @@
       "firstNameRequired":"Du måste skriva in ditt förnamn",
       "lastNameRequired":"Du måste skriva in ditt efternamn",
       "emailRequired":"E-post krävs",
-      "messageRequired":"Meddelande text saknas"
+      "messageRequired":"Meddelande text saknas",
+      "alertSent":"Ditt mail har skickats",
+      "alertNotSent":"Något har gått fel"
     }
   }
 }

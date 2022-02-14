@@ -64,13 +64,7 @@ export default function Skills({ colorTheme, title }) {
           }}
         >
           {starsColor1 === "gold" ? (
-            <Animatable.Text
-              animation="bounceIn"
-              iterationCount={5}
-              style={{
-                alignSelf: "center",
-              }}
-            >
+            <Animatable.Text animation="bounceInUp" iterationCount={5}>
               <FontAwesome name="star" size={10} color={starsColor1} />
             </Animatable.Text>
           ) : (
@@ -78,13 +72,7 @@ export default function Skills({ colorTheme, title }) {
           )}
 
           {starsColor2 === "gold" ? (
-            <Animatable.Text
-              animation="bounceIn"
-              iterationCount={5}
-              style={{
-                alignSelf: "center",
-              }}
-            >
+            <Animatable.Text animation="bounceIn" iterationCount={5}>
               <FontAwesome name="star" size={10} color={starsColor2} />
             </Animatable.Text>
           ) : (
@@ -92,13 +80,7 @@ export default function Skills({ colorTheme, title }) {
           )}
 
           {starsColor3 === "gold" ? (
-            <Animatable.Text
-              animation="bounceIn"
-              iterationCount={5}
-              style={{
-                alignSelf: "center",
-              }}
-            >
+            <Animatable.Text animation="bounceIn" iterationCount={5}>
               <FontAwesome name="star" size={10} color={starsColor3} />
             </Animatable.Text>
           ) : (
@@ -106,13 +88,7 @@ export default function Skills({ colorTheme, title }) {
           )}
 
           {starsColor4 === "gold" ? (
-            <Animatable.Text
-              animation="bounceIn"
-              iterationCount={5}
-              style={{
-                alignSelf: "center",
-              }}
-            >
+            <Animatable.Text animation="bounceIn" iterationCount={5}>
               <FontAwesome name="star" size={10} color={starsColor4} />
             </Animatable.Text>
           ) : (
@@ -120,13 +96,7 @@ export default function Skills({ colorTheme, title }) {
           )}
 
           {starsColor5 === "gold" ? (
-            <Animatable.Text
-              animation="bounceIn"
-              iterationCount={5}
-              style={{
-                alignSelf: "center",
-              }}
-            >
+            <Animatable.Text animation="bounceIn" iterationCount={5}>
               <FontAwesome name="star" size={10} color={starsColor5} />
             </Animatable.Text>
           ) : (

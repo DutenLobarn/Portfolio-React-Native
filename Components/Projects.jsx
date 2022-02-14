@@ -20,6 +20,8 @@ import { useFonts, Orbitron_500Medium } from "@expo-google-fonts/orbitron";
 
 import AppLoading from "expo-app-loading";
 
+import * as Animatable from "react-native-animatable";
+
 export default function Projects({ colorTheme, btnBackground, title }) {
   const { t } = useTranslation();
 
@@ -48,18 +50,25 @@ export default function Projects({ colorTheme, btnBackground, title }) {
 
   const project = (img, toggleProject, bolean) => {
     return (
-      <Pressable onPress={() => toggleProject(!bolean)}>
-        <ImageBackground
-          source={img}
-          resizeMode="stretch"
+      <Animatable.View animation={"zoomIn"}>
+        <Pressable
           style={{
             height: 300,
             width: 250,
             alignSelf: "center",
             marginBottom: 40,
           }}
-        ></ImageBackground>
-      </Pressable>
+          onPress={() => toggleProject(!bolean)}
+        >
+          <ImageBackground
+            source={img}
+            resizeMode="stretch"
+            style={{
+              height: 300,
+            }}
+          ></ImageBackground>
+        </Pressable>
+      </Animatable.View>
     );
   };
 
@@ -74,7 +83,8 @@ export default function Projects({ colorTheme, btnBackground, title }) {
     bolean
   ) => {
     return (
-      <View
+      <Animatable.View
+        animation={"zoomIn"}
         style={{
           position: "absolute",
           top: 0,
@@ -183,14 +193,15 @@ export default function Projects({ colorTheme, btnBackground, title }) {
                   color: colorTheme,
                 }}
               >
-                Close Window
+                {t("projectPage.btnText")}
               </Text>
             </Pressable>
           </View>
         </LinearGradient>
-      </View>
+      </Animatable.View>
     );
   };
+
   let [fontsLoaded] = useFonts({
     Orbitron_500Medium,
   });
@@ -221,7 +232,6 @@ export default function Projects({ colorTheme, btnBackground, title }) {
           {project(image3, setToggleProject3, toggleProject3)}
           {project(image4, setToggleProject4, toggleProject4)}
         </ScrollView>
-
         {toggleProject1 ? (
           moreProjectInfo(
             t("projectPage.storageModal.title"),

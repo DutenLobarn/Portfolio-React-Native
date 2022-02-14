@@ -43,9 +43,9 @@
     "aboutPage": {
       "title": "About",
       "textPart1": "Hello, I´m Mandus Lindström born year 1985 in Sweden.",
-      "textPart2": "I am a FrontEnd student and i am looking for work opportunities.",
-      "textPart3": "I have a big passion for coding and especially to get the coding result in a fast and understandable way, both for my peers and future Mandus Lindström. The most difficult coding problems i think is the most fun.",
-      "textPart4": "One day I will be happy to call myself a fullstack developer. Right now I am enjoying coding with JS and React very much, my BackEnd skills need improvments... With that said i do not have anything against learning new skills, but for now i am focused on deepening my skillset."
+      "textPart2": "I am a FrontEnd student and I am looking for work opportunities.",
+      "textPart3": "I have a big passion for coding and especially getting the coding result in a fast and in an understandable way, both for my peers and future Mandus Lindström. The most difficult coding problems I think are the most fun.",
+      "textPart4": "One day I will be happy to call myself a full-stack developer. Right now I am enjoying coding with JS and React very much, my BackEnd skills need improvements... With that said I do not have anything against learning new skills, but for now, I am focused on deepening my skillset."
     },
     "contactPage": {
       "title": "Contact",
@@ -58,8 +58,8 @@
       "lastNameRequired": "You need to fill in your lastname",
       "emailRequired": "Email is missing",
       "messageRequired": "Message text is missing",
-      "alertSent":"You mail have been sent",
-      "alertNotSent":"Something has gone wrong"
+      "alertSent": "You mail have been sent",
+      "alertNotSent": "Something has gone wrong"
     }
   }
 }

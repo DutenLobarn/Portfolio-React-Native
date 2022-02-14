@@ -58,8 +58,8 @@
       "lastNameRequired": "您必须输入您的姓氏",
       "emailRequired": "電子郵件是必需的",
       "messageRequired": "缺少消息文本",
-      "alertSent":"您的郵件已發送",
-      "alertNotSent":"出了點問題"
+      "alertSent": "您的郵件已發送",
+      "alertNotSent": "出了點問題"
     }
   }
 }

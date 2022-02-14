@@ -9,6 +9,8 @@
     "projectPage": {
       "title": "項目",
       "btnText": "關閉",
+      "alertWebPage": "此項目沒有可顯示的實時頁面.",
+      "alertProject": "此項目沒有要顯示的存儲庫頁面.",
       "storageModal": {
         "title": "儲藏室出租",
         "projectTools": "React, Redux och Sendgrid",
@@ -55,7 +57,9 @@
       "firstNameRequired": "您必须输入您的名字",
       "lastNameRequired": "您必须输入您的姓氏",
       "emailRequired": "電子郵件是必需的",
-      "messageRequired": "缺少消息文本"
+      "messageRequired": "缺少消息文本",
+      "alertSent":"您的郵件已發送",
+      "alertNotSent":"出了點問題"
     }
   }
 }

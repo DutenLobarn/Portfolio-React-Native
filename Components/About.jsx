@@ -45,6 +45,7 @@ export default function About({ colorTheme, title }) {
   } else {
     return (
       <LinearGradient
+        style={{ height: "100%" }}
         colors={[mainLinearGradientColor, secondaryLinearGradientColor]}
       >
         <ScrollView>

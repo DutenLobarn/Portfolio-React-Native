@@ -12,6 +12,8 @@ import { LinearGradient } from "expo-linear-gradient";
 
 import { useTranslation } from "react-i18next";
 
+import * as Animatable from "react-native-animatable";
+
 export default function Skills({ colorTheme, title }) {
   const { t } = useTranslation();
   // here I made a function so you can cut down code
@@ -61,11 +63,45 @@ export default function Skills({ colorTheme, title }) {
             justifyContent: "center",
           }}
         >
-          <FontAwesome name="star" size={10} color={starsColor1} />
-          <FontAwesome name="star" size={10} color={starsColor2} />
-          <FontAwesome name="star" size={10} color={starsColor3} />
-          <FontAwesome name="star" size={10} color={starsColor4} />
-          <FontAwesome name="star" size={10} color={starsColor5} />
+          {starsColor1 === "gold" ? (
+            <Animatable.Text animation="bounceInUp" iterationCount={5}>
+              <FontAwesome name="star" size={10} color={starsColor1} />
+            </Animatable.Text>
+          ) : (
+            <FontAwesome name="star" size={10} color={starsColor1} />
+          )}
+
+          {starsColor2 === "gold" ? (
+            <Animatable.Text animation="bounceIn" iterationCount={5}>
+              <FontAwesome name="star" size={10} color={starsColor2} />
+            </Animatable.Text>
+          ) : (
+            <FontAwesome name="star" size={10} color={starsColor2} />
+          )}
+
+          {starsColor3 === "gold" ? (
+            <Animatable.Text animation="bounceIn" iterationCount={5}>
+              <FontAwesome name="star" size={10} color={starsColor3} />
+            </Animatable.Text>
+          ) : (
+            <FontAwesome name="star" size={10} color={starsColor3} />
+          )}
+
+          {starsColor4 === "gold" ? (
+            <Animatable.Text animation="bounceIn" iterationCount={5}>
+              <FontAwesome name="star" size={10} color={starsColor4} />
+            </Animatable.Text>
+          ) : (
+            <FontAwesome name="star" size={10} color={starsColor4} />
+          )}
+
+          {starsColor5 === "gold" ? (
+            <Animatable.Text animation="bounceIn" iterationCount={5}>
+              <FontAwesome name="star" size={10} color={starsColor5} />
+            </Animatable.Text>
+          ) : (
+            <FontAwesome name="star" size={10} color={starsColor5} />
+          )}
         </View>
       </View>
     );
@@ -159,74 +195,74 @@ export default function Skills({ colorTheme, title }) {
             <View style={{ flex: 1 }}>
               {levelSkills("Student")}
 
-              <View
+              <Animatable.Text
+                animation="bounceIn"
+                iterationCount={5}
                 style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
+                  alignSelf: "center",
                 }}
               >
                 <FontAwesome name="star" size={10} color="gold" />
-              </View>
+              </Animatable.Text>
             </View>
 
             {/* here begin the whole wrap for Entry */}
             <View style={{ flex: 1 }}>
               {levelSkills("Entry")}
-              <View
+              <Animatable.Text
+                animation="bounceIn"
+                iterationCount={5}
                 style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
+                  alignSelf: "center",
                 }}
               >
                 <FontAwesome name="star" size={10} color="gold" />
                 <FontAwesome name="star" size={10} color="gold" />
-              </View>
+              </Animatable.Text>
             </View>
 
             {/* here begin the whole wrap for Junior */}
             <View style={{ flex: 1 }}>
               {levelSkills("Junior")}
 
-              <View
+              <Animatable.Text
+                animation="bounceIn"
+                iterationCount={5}
                 style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
+                  alignSelf: "center",
                 }}
               >
                 <FontAwesome name="star" size={10} color="gold" />
                 <FontAwesome name="star" size={10} color="gold" />
                 <FontAwesome name="star" size={10} color="gold" />
-              </View>
+              </Animatable.Text>
             </View>
 
             {/* here begin the whole wrap for Senior */}
             <View style={{ flex: 1 }}>
               {levelSkills("Senior")}
-              <View
+              <Animatable.Text
+                animation="bounceIn"
+                iterationCount={5}
                 style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
+                  alignSelf: "center",
                 }}
               >
                 <FontAwesome name="star" size={10} color="gold" />
                 <FontAwesome name="star" size={10} color="gold" />
                 <FontAwesome name="star" size={10} color="gold" />
                 <FontAwesome name="star" size={10} color="gold" />
-              </View>
+              </Animatable.Text>
             </View>
 
             {/* here begin the whole wrap for Master*/}
             <View style={{ flex: 1 }}>
               {levelSkills("Master")}
-              <View
+              <Animatable.Text
+                animation="bounceIn"
+                iterationCount={5}
                 style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
+                  alignSelf: "center",
                 }}
               >
                 <FontAwesome name="star" size={10} color="gold" />
@@ -234,7 +270,7 @@ export default function Skills({ colorTheme, title }) {
                 <FontAwesome name="star" size={10} color="gold" />
                 <FontAwesome name="star" size={10} color="gold" />
                 <FontAwesome name="star" size={10} color="gold" />
-              </View>
+              </Animatable.Text>
             </View>
           </View>
 

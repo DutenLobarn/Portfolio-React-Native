@@ -115,12 +115,21 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                     actions.resetForm();
 
                     const to = "cuongtoq79@gmail.com";
-                    alert("Mail is Sent");
+                    {
+                      to === "cuongtoq79@gmail.com"
+                        ? alert(t("contactPage.alertSent"))
+                        : alert(t("contactPage.alertNotSent"));
+                    }
                     email(to, {
                       cc: values.Email,
                       subject: "kontakta Cuong",
-                      body: `${values.FirstName}  ${values.LastName} \n ${values.Message}`,
-                    }).catch(alert("something has gone wrong"));
+                      body:
+                        values.FirstName +
+                        " " +
+                        values.LastName +
+                        "\n" +
+                        values.Message,
+                    }).catch(console.error);
                   }}
                 >
                   {(props) => (

@@ -52,12 +52,14 @@
       "firstName": "Firstname",
       "lastName": "Lastname",
       "message": "Message",
-      "email": "Email",
       "btnText": "Continue",
-      "firstNameRequired": "Du måste skriva in ditt förnamn",
-      "lastNameRequired": "Du måste skriva in ditt efternamn",
-      "emailRequired": "E-post krävs",
-      "messageRequired": "Meddelande text saknas"
+      "email": "Email",
+      "firstNameRequired": "You need to fill in your firstname",
+      "lastNameRequired": "You need to fill in your lastname",
+      "emailRequired": "Email is missing",
+      "messageRequired": "Message text is missing",
+      "alertSent":"You mail have been sent",
+      "alertNotSent":"Something has gone wrong"
     }
   }
 }

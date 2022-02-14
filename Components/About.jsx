@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
-import { Text, View, Linking, ScrollView } from "react-native";
+import { Text, View, Linking, ScrollView, Animated } from "react-native";
 
 import { LinearGradient } from "expo-linear-gradient";
 import { AntDesign } from "@expo/vector-icons";
@@ -21,19 +21,30 @@ export default function About({ colorTheme, title }) {
     secondaryLinearGradientColor = "grey";
   }
 
+  const fadeIn = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    Animated.timing(fadeIn, {
+      toValue: 1,
+      duration: 4000,
+      useNativeDriver: true,
+    }).start();
+  }, []);
+
   const textPart = (text) => {
     return (
-      <Text
+      <Animated.Text
         style={{
           color: colorTheme === "#000" ? "#000" : "#fff",
           fontSize: 18,
           paddingTop: 10,
           paddingBottom: 10,
           lineHeight: 25,
+          opacity: fadeIn,
         }}
       >
         {text}
-      </Text>
+      </Animated.Text>
     );
   };
 
@@ -45,6 +56,7 @@ export default function About({ colorTheme, title }) {
   } else {
     return (
       <LinearGradient
+        style={{ height: "100%" }}
         colors={[mainLinearGradientColor, secondaryLinearGradientColor]}
       >
         <ScrollView>
@@ -68,13 +80,14 @@ export default function About({ colorTheme, title }) {
             {textPart(t("aboutPage.textPart3"))}
             {textPart(t("aboutPage.textPart4"))}
 
-            <View
+            <Animated.View
               style={{
                 display: "flex",
                 flexDirection: "row",
                 width: "100%",
                 justifyContent: "space-around",
                 marginTop: 40,
+                opacity: fadeIn,
               }}
             >
               <AntDesign
@@ -114,7 +127,7 @@ export default function About({ colorTheme, title }) {
                 size={50}
                 color={colorTheme}
               />
-            </View>
+            </Animated.View>
           </View>
         </ScrollView>
       </LinearGradient>

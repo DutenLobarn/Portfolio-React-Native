@@ -14,8 +14,8 @@ import { useTranslation } from "react-i18next";
 
 export default function Skills({ colorTheme, title }) {
   const { t } = useTranslation();
-  // here I made a function so you can cut down code
 
+  // here I made a function so you can cut down code
   const element = (
     title,
     imagePath,
@@ -72,7 +72,6 @@ export default function Skills({ colorTheme, title }) {
   };
 
   //here I cut down code for level skills
-
   const levelSkills = (text) => {
     return (
       <Text
@@ -87,7 +86,6 @@ export default function Skills({ colorTheme, title }) {
   };
 
   // here I cut down code for skills headline title
-
   const skillsHeadLine = (headLineTitle) => {
     return (
       <Text
@@ -250,7 +248,7 @@ export default function Skills({ colorTheme, title }) {
             }}
           >
             {element(
-              " Figma",
+              "Figma",
               require("../assets/src/figma.png"),
               "gold",
               "gold",

@@ -8,28 +8,28 @@
     },
     "projectPage": {
       "title": "Projekt",
-      "btnText": "1",
-      "alertWebPage": "123",
-      "alertProject": "1234",
+      "btnText": "Mbyll Dritaren",
+      "alertWebPage": "Ky projekt nuk ka ndonje faqe per te treguar aktualisht.",
+      "alertProject": "Ky projekt nuk ka ndonje faqe te ruajtur per te treguar aktualisht.",
       "storageModal": {
-        "title": "1",
-        "projectTools": "React, Redux 2 Sendgrid",
-        "projectDescription": "3"
+        "title": "Dhenie me qera e magazinave.",
+        "projectTools": "React, Redux edhe Sendgrid",
+        "projectDescription": "Ne kete projekt ishte synimi im per te vazhduar dhe per te zhvilluar njohurite e mija ne React dhe Redux por gjithashtu te mesoj qe te marr emaile te automatizuara nga perdoruesit."
       },
       "landloardModal": {
-        "title": "1",
-        "projectTools": "HTML och CSS",
-        "projectDescription": "2"
+        "title": "Qiradhenesi",
+        "projectTools": "HTML edhe CSS",
+        "projectDescription": "Ne kete projekt ishte synimi im per te vazhduar dhe te zhvilloje njohurite e mija ne HTML dhe CSS por gjithashtu te luaj pak me CSS. Kjo faqe eshte larg derisa te jete gati!"
       },
       "webshopModal": {
-        "title": "Node 1",
-        "projectTools": "Node JS, Mongoose 2 MongoDB (BackEnd)",
-        "projectDescription": "3"
+        "title": "Node Pune Ekipore",
+        "projectTools": "Node JS, Mongoose edhe MongoDB (BackEnd)",
+        "projectDescription": "Une dhe nje shok klase morem nga mesuesi nje FrontEnd gati qe ishte i shkruar ne VUE dhe me pas punuam neve me Node JS, Mongoose dhe MongoDB ne kete projekt shkolle. Ky ishte nje projekt shume i bukur dhe ishte kenaqesi te bashkepunoja med shokun e klases."
       },
       "bookLibraryModal": {
-        "title": "1",
+        "title": "Librari",
         "projectTools": "React, Redux, Figma,",
-        "projectDescription": "2"
+        "projectDescription": "Kete projekt e bera une dhe 4 shok klase gjate kursit tone Agila. Kenaqesi te punoja me kete menyre pune te Agila ku dhe mora shansin te veproja si scrum master te cilet mendoj te dyja ishin kenaqesi dhe nje rol qe une dhe shoket e klases menduam qe me pershtatet mua. Ekstra kenaqesi gjithashtu qe neve morem nje rezultat qe na kenaqi."
       }
     },
     "skillsPage": {
@@ -38,26 +38,26 @@
       "frontend": "FrontEnd",
       "app": "APP",
       "backend": "BackEnd",
-      "database": "1"
+      "database": "Baze te dhenash"
     },
     "aboutPage": {
       "title": "Rreth",
-      "textPart1": "del1",
-      "textPart2": "del2",
-      "textPart3": "del3",
-      "textPart4": "del4"
+      "textPart1": "Pershendetje. Emri im eshte Mandus Lindström. I lindur 1985 ne Suedi.",
+      "textPart2": "Une jam nje student i FrontEnd dhe po shikoj mbas ndonje mudesie punesimi.",
+      "textPart3": "Une kam nje passion shume te madh per shkruajtur kod dhe vecanerisht qe une marr nje rezultat te shpejte te kodimit dhe kjo duhet te jete e lehte per ta kuptuar, sebashku per kolleget e mije dhe per te ardhmen e Mandusit Lindström. Sfidat me te veshtira te kodit jane me te bukurat mendoj une.",
+      "textPart4": "Nje dite shpresoj une do te quhem plotesisht nje inxhinier zhvillues. Aktualisht me pelqen shume te punoje me JS dhe React, njohurite e mija te BackEnd-it duhen te zhvillohen... Me kete thenie nuk kam asgje kunder qe te mesoj gjuhe/njohuri te reja por per momentin jam i fokusuar qe te thelloj gjuhet e mia tashme te filluara."
     },
     "contactPage": {
       "title": "Kontaktoni",
-      "firstName": "1",
-      "lastName": "2",
-      "message": "3",
-      "email": "44",
-      "btnText": "4",
-      "firstNameRequired": "Du måste skriva in ditt förnamn",
-      "lastNameRequired": "Du måste skriva in ditt efternamn",
-      "emailRequired": "E-post krävs",
-      "messageRequired": "Meddelande text saknas"
+      "firstName": "Emri",
+      "lastName": "Mbiemri",
+      "email": "E-mail",
+      "message": "Mesazh",
+      "btnText": "Vazhdo",
+      "firstNameRequired": "Ti duhet te shkruash emrin tend",
+      "lastNameRequired": "Ti duhet te shkruash mbiemrin tend",
+      "emailRequired": "E-mail kerkohet",
+      "messageRequired": "Teksti i mesazhit mungon"
     }
   }
 }

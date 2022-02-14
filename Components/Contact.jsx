@@ -114,11 +114,11 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                   onSubmit={(values, actions) => {
                     actions.resetForm();
 
-                    const to = "cuongtoq79@gmail.com";
+                    const to = "mandus85@hotmail.com";
                     alert("Mail is Sent");
                     email(to, {
                       cc: values.Email,
-                      subject: "kontakta Cuong",
+                      subject: "Mejl från portfolio app",
                       body: `${values.FirstName}  ${values.LastName} \n ${values.Message}`,
                     }).catch(alert("something has gone wrong"));
                   }}

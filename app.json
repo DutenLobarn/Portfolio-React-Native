@@ -1,7 +1,10 @@
 {
   "expo": {
-    "name": "Portfolio-React-Native",
-    "slug": "Portfolio-React-Native",
+    "name": "Portfolio React Native",
+    "slug": "portfolioreactnative",
+    "privacy": "public",
+    "description": "An application that show my portfolio.",
+    "owner": "mandus",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,7 +20,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mandus.portfolioreactnative"
     },
     "android": {
       "adaptiveIcon": {

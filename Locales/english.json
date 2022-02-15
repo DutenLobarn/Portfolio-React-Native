@@ -59,7 +59,8 @@
       "emailRequired": "Email is missing",
       "messageRequired": "Message text is missing",
       "alertSent": "You mail have been sent",
-      "alertNotSent": "Something has gone wrong"
+      "alertNotSent": "Something has gone wrong",
+      "subject":"Email from portfolio app"
     }
   }
 }

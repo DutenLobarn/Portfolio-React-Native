@@ -59,7 +59,8 @@
       "emailRequired":"E-post krävs",
       "messageRequired":"Meddelande text saknas",
       "alertSent":"Ditt mail har skickats",
-      "alertNotSent":"Något har gått fel"
+      "alertNotSent":"Något har gått fel",
+      "subject":"Mejl från portfolio app"
     }
   }
 }

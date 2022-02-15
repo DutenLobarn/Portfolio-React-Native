@@ -115,12 +115,19 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                     actions.resetForm();
 
                     const to = "mandus85@hotmail.com";
-                    alert("Mail is Sent");
+                    to === "mandus85@hotmail.com"
+                      ? alert(t("contactPage.alertSent"))
+                      : alert(t("contactPage.alertNotSent"));
                     email(to, {
                       cc: values.Email,
-                      subject: "Mejl från portfolio app",
-                      body: `${values.FirstName}  ${values.LastName} \n ${values.Message}`,
-                    }).catch(alert("something has gone wrong"));
+                      subject: t("contactPage.subject"),
+                      body:
+                        values.FirstName +
+                        " " +
+                        values.LastName +
+                        "\n" +
+                        values.Message,
+                    }).catch(console.error);
                   }}
                 >
                   {(props) => (

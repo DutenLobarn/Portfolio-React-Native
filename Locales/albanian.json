@@ -57,7 +57,10 @@
       "firstNameRequired": "Ti duhet te shkruash emrin tend",
       "lastNameRequired": "Ti duhet te shkruash mbiemrin tend",
       "emailRequired": "E-mail kerkohet",
-      "messageRequired": "Teksti i mesazhit mungon"
+      "messageRequired": "Teksti i mesazhit mungon",
+      "alertSent":"Ditt mail har skickats",
+      "alertNotSent":"Något har gått fel",
+      "subject":"Email nga aplikacioni i portofolit"
     }
   }
 }

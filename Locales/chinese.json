@@ -59,7 +59,8 @@
       "emailRequired": "電子郵件是必需的",
       "messageRequired": "缺少消息文本",
       "alertSent": "您的郵件已發送",
-      "alertNotSent": "出了點問題"
+      "alertNotSent": "出了點問題",
+      "subject":"來自投資組合應用程序的電子郵件"
     }
   }
 }

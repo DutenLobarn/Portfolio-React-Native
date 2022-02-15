@@ -64,7 +64,7 @@ export default function Skills({ colorTheme, title }) {
           }}
         >
           {starsColor1 === "gold" ? (
-            <Animatable.Text animation="bounceInUp" iterationCount={5}>
+            <Animatable.Text animation="bounceIn" iterationCount={5}>
               <FontAwesome name="star" size={10} color={starsColor1} />
             </Animatable.Text>
           ) : (

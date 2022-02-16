@@ -4,7 +4,7 @@
     "slug": "portfolioreactnative",
     "privacy": "public",
     "description": "An application that show my portfolio.",
-    "owner": "cuong",
+    "owner": "mandus",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,7 +20,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.mandus.portfolioreactnative",
-      "buildNumber":"1.0.0"
+      "buildNumber": "1.0.0"
     },
     "android": {
       "package": "com.mandus.portfolioreactnative",

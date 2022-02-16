@@ -113,9 +113,9 @@ export default function Contact({ colorTheme, title, btnBackground }) {
                   /* here is went you press button SEND then save data */
                   onSubmit={(values, actions) => {
                     actions.resetForm();
+                    const to = "cuongtoq79@gmail.com";
 
-                    const to = "mandus85@hotmail.com";
-                    to === "mandus85@hotmail.com"
+                    to === "cuongtoq79@gmail.com"
                       ? alert(t("contactPage.alertSent"))
                       : alert(t("contactPage.alertNotSent"));
                     email(to, {
